@@ -47,11 +47,18 @@ int charToint(char str){
 int strToint(std::string str){
     //std::cout << "strToint annettu " << str <<  "\n" << std::endl;
     //UUTTA 15.4
-    size_t pilkunPaikka = 0;
+    long unsigned int pilkunPaikka = 0;
+    long unsigned int dollarinPaikka = 0;
     while( str.find( '.') != std::string::npos){
         pilkunPaikka = str.find('.');
         str.erase(pilkunPaikka, 1);
     }
+    
+    while( str.find( '$') != std::string::npos){
+        dollarinPaikka = str.find('$');
+        str.erase(dollarinPaikka, 1);
+    }
+    
     //std::cout << "\n" << "Stringi '.' poiston jalkeen" << str << std::endl;
 
     //UUTTA 15.4
@@ -75,4 +82,3 @@ int strToint(std::string str){
     }
     return palautus;
 }
-
