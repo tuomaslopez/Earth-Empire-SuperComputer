@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
    static std::string TurretsComa;
    static std::string Tankscoma;
    static std::string businessTechString;
+   static std::string PerCapitaIncomeString;
    static int businessInt;
    static int businessStringSize;
    static std::string residentialTechString;
@@ -73,7 +74,9 @@ int main(int argc, char *argv[])
    static double returnPop = 0;
    static int landINT = 0;
    static double revenue = 0;
-   static double GDPpop = 0;
+   static std::string GDPpopString = "";
+   static double GDPpopdouble = 0;
+   static int GDPpopint = 0;
    char usingCashing  = 'N';
    double cashningBonus = 1.0;
    int PerCapita = 0;
@@ -252,6 +255,38 @@ case(1):
                         weaponInt = strToint(weaponTechString);
                         weaponDouble = weaponInt;
                             weaponDouble = weaponDouble/1000;
+                            
+                       //while( temp2 != "Per"){
+                       // std::cin >> temp2 ;
+                       // }
+                        //std::cin >> tempString;
+                        //puts("Line 261");
+                       // 
+                       // 
+                        //std::cin >> tempString;
+                        //std::cout << tempString << std::endl;
+                        //std::cin >> tempString;
+                        //std::cout << tempString << std::endl; 
+                        //std::cin >> PerCapitaIncomeString;
+                        //std::cout << PerCapitaIncomeString << std::endl;
+                        
+                          while( temp2 != "Income"){
+                          std::cin >> temp2;
+    
+                        }
+                        std::cin >> GDPpopString;
+                        std::cout << "temp2 line276 " << temp2 << std::endl;
+                        std::cout << " GDPpopString= " << GDPpopString << std::endl;
+                        GDPpopint = strToint(GDPpopString);
+                        std::cout << "Line 281, GDPpopint = " << GDPpopint << std::endl; 
+                        GDPpopdouble = (GDPpopint/100.0);
+                       	std::cout << "Line 283, GDPpodouble = " << GDPpopdouble << std::endl; 	
+                       //  while( temp2 != "Income")
+//
+  //                      
+    //                    }
+
+                        
 
                         while( temp2 != "Spies"){
                         std::cin >> temp2;
@@ -319,7 +354,7 @@ case(1):
                         //std::cout << "t is tax how much make eventally running a turn with cash on, taking to acount for the price of food " << taxDouble << '\n';
                         //std::cout << "Insert to wolfram alpha: max " << "1.2t*" << "(22.5*(1.0-t)*(1.0+((" << Networthint << "/" << land << ")/90000)) * (1 + (2 * (" << BuildingResidences << "/" << land << ")))" <<"*" << "((1-0.95*" << "t" << ")*(24*" << BuildingResidences <<"+12*" << land <<") )*" << businessTech << "*" << residentialTech;
                         //std::cout << "-0.03*(" << foodPrice << ")" << "*" << "((1-0.95*" << "t)" <<"(24*" << BuildingResidences <<"+12*" << land <<") )*" << residentialTech << std::endl;
-                        //std::cout << "Per capita income as String " << PerCapitaIncomeString << std::endl;
+                        //std::cout << "ta income as String " << PerCapitaIncomeString << std::endl;
                         //double perCapitaIncomeDouble = 0;
 
                         std::cout << "Take of the part starting with -0.03 to optimise without counting how much food you need (This tells the opitimal revenue before expensies) " << NetworthString << std::endl;
@@ -463,14 +498,13 @@ case(101):
 
                         //std::cout << double((Networthint/landINT)) << std::endl;
 
-                        GDPpop = businessTech*aa*((b)-taxDouble)*((b)+(((Networthint/landINT))/((c))))*((b)+((d)*((BuildingResidences/landINT))));
-                        std::cout << "Per capita income="<<  GDPpop << std::endl;
-                        PerCapita = 100*GDPpop;
-                        GDPpop = (PerCapita/100.0);
+                        
+                        std::cout << "Per capita income="<<  GDPpopdouble << std::endl;
+			
 
-                        std::cout << "Per capita income double=" << GDPpop  << std::endl;
+                        std::cout << "Per capita income double=" << GDPpopdouble  << std::endl;
                         // Put in comments in final version
-                        revenue =  maxpopINT*GDPpop*taxDouble;
+                        revenue =  maxpopINT*GDPpopdouble*taxDouble;
                         std::cout << " Are you using cashing? Type Y or N" << std::endl;
                         std::cin >> usingCashing ;
                         if (usingCashing == 'Y'){
