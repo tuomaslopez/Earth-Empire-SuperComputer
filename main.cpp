@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
    int tanksint = 0;
    double aa = 22.5;
    double b = 1.0;
-   double c = 90000.0;
+   double c = 18000.0;
    double d = 2.0;
    double industryGovermentBonus = 1.00;
    //static int money;
