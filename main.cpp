@@ -18,13 +18,9 @@ int main(int argc, char *argv[])
 {
     //QCoreApplication a(argc, argv);
    int troopint = 0;
-   int jetsint = 0;
+   
    int turretsint = 0;
    int tanksint = 0;
-   double aa = 22.5;
-   double b = 1.0;
-   double c = 18000.0;
-   double d = 2.0;
    double industryGovermentBonus = 1.00;
    //static int money;
 
@@ -85,9 +81,11 @@ int main(int argc, char *argv[])
    int priceJets = 0;
    int priceTanks = 0;
    int priceTurrets = 0;
-
-
-
+   int jetsint = 0;
+   double industrialTech = 1.00;
+   std::string IndustrialTechString = "";
+   int industrialInt = 1;
+   double industrialDouble = 1.0;
 
 
 static std::string enemyGoverment;
@@ -109,12 +107,12 @@ std::cout << "1. own default Adivisor page" << std::endl;
 std::cout << "2: enemy military spy" << std::endl;
 std::cout << "10 manually insert food price" << std::endl;
 //std::cout << "12 manually insert cash(not used anywhere)" << std::endl;
-std::cout << "100 see max pop with tax rate, use after advisor page (broken)" << std::endl;
+std::cout << "100 see max pop with tax rate, use after advisor page " << std::endl;
 std::cout << "101 to see revenue with a tax rate, use after advisor page" << std::endl;
-std::cout << "102 to see profit selling military, use after advisor page and inserting price of food //TODO" << std::endl;
-std::cout << "200 to see dollar expences from military, use after advisor page //TODO FIX this broken" << std::endl;
+std::cout << "102 to manually add prices for troops,turrets and tanks " << std::endl;
+std::cout << "103 see how many Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
 std::cout << "999 to exit" << std::endl;
-std::cout << "1000 to manually add prices for troops,turrets and tanks //TODO do manual copy-paste for market screen" << std::endl;
+
 
 
 std::cin >> command;
@@ -190,8 +188,8 @@ case(1):
 
                         // This is area to modify so bonuses that change every round
                         if (govermentString == "Communism"){
-
-                            industryGovermentBonus = 1.35;
+			    
+                            industryGovermentBonus = GovermentIndustry("Communism");
                         }
                         // This is area to modify so bonuses that change every round
                         while (temp2 != "Networth"){
@@ -256,6 +254,16 @@ case(1):
                         weaponDouble = weaponInt;
                             weaponDouble = weaponDouble/1000;
                             
+                       
+                       while( temp2 != "Industrial"){
+                       std::cin >> temp2;
+                       }
+                       std::cin >> tempString;
+                       std::cin >> IndustrialTechString;
+                       industrialInt = strToint(IndustrialTechString);
+                       industrialDouble = industrialInt;
+                       industrialDouble = industrialDouble/10000;
+                       
                        //while( temp2 != "Per"){
                        // std::cin >> temp2 ;
                        // }
@@ -269,6 +277,9 @@ case(1):
                         //std::cout << tempString << std::endl; 
                         //std::cin >> PerCapitaIncomeString;
                         //std::cout << PerCapitaIncomeString << std::endl;
+                        
+                        
+                        
                         
                           while( temp2 != "Income"){
                           std::cin >> temp2;
@@ -341,6 +352,7 @@ case(1):
                         std::cout << "Residential tech is=" << residentialTech << std::endl;
                         std::cout << "Weapon String is " << '"' << weaponTechString << '"' << std::endl;
                         std::cout << "Weapon Tech double is " << weaponDouble << std::endl;
+                        std::cout << "Industrial Tech double is " << industrialDouble << std::endl;
                         std::cout << "Troops are " << troops << std::endl;
                         std::cout << "Jets are " << jets << std::endl;
                         std::cout << "Tanks are " << tanks << std::endl;
@@ -483,26 +495,26 @@ case(101):
 
 
                         // Put in comments in final version
-                        std::cout << "businessTech "<<businessTech<< std::endl;
-                        std::cout << "tax double"<<taxDouble << std::endl;
-                        std::cout << "Networthint=" << Networthint << std::endl;
-                        std::cout << "landINT=" << landINT << std::endl;
-                        std::cout << "Max pop as int=" << maxpopINT << std::endl;
-                        std::cout << "Building Residences" <<BuildingResidences <<std::endl;
-                        std::cout << "aa=" << aa <<std::endl;
-                        std::cout << "b=" << b  << std::endl;
-                        std::cout << "c=" << c << std::endl;
-                        std::cout << "d=" << d << std::endl;
+                        //std::cout << "businessTech "<<businessTech<< std::endl;
+                        //std::cout << "tax double"<<taxDouble << std::endl;
+                        //std::cout << "Networthint=" << Networthint << std::endl;
+                        //std::cout << "landINT=" << landINT << std::endl;
+                        //std::cout << "Max pop as int=" << maxpopINT << std::endl;
+                        //std::cout << "Building Residences" <<BuildingResidences <<std::endl;
+                        //std::cout << "aa=" << aa <<std::endl;
+                        //std::cout << "b=" << b  << std::endl;
+                        //std::cout << "c=" << c << std::endl;
+                        //std::cout << "d=" << d << std::endl;
                         // Put in comments in final version
 
 
                         //std::cout << double((Networthint/landINT)) << std::endl;
 
                         
-                        std::cout << "Per capita income="<<  GDPpopdouble << std::endl;
+                        //std::cout << "Per capita income="<<  GDPpopdouble << std::endl;
 			
 
-                        std::cout << "Per capita income double=" << GDPpopdouble  << std::endl;
+                        //std::cout << "Per capita income double=" << GDPpopdouble  << std::endl;
                         // Put in comments in final version
                         revenue =  maxpopINT*GDPpopdouble*taxDouble;
                         std::cout << " Are you using cashing? Type Y or N" << std::endl;
@@ -512,43 +524,53 @@ case(101):
                         }
                         std::cout << "Tax Revenues with max pop=" << cashningBonus*revenue <<  std::endl;
                         std::cout << "Food consumption from max pop=" << maxpopINT*0.03 << std::endl;
+                        std::cout << "Food consumption from military=" << militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) << std::endl;
                         std::cout << "Food cost from pop(have you put the market value of food?)=" << maxpopINT*0.03*foodPrice << std::endl;
+                        std::cout << "Food cost from military((have you put the market value of food?)=" << foodPrice*militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) ;             
+                    
                         std::cout << "Profit from pop after food cost=" << (cashningBonus*revenue-1.0*maxpopINT*0.03*foodPrice) << std::endl;
                         MakeMoney();
                         continue;
- case(102):
+ case(103):
                         troopint = 0;
                         jetsint = 0;
                         turretsint = 0;
                         tanksint = 0;
 
                         std::cout << "Industrial complexes=" << BuildingIndustrialComplexes << std::endl;
+                        std::cout << "Industrial tech=" << industrialDouble << std::endl;
+                        std::cout << "Goverment Industrial tech bonus=" << industryGovermentBonus << std::endl; 
+                        
                         BuildingIndustrialComplexesDouble = BuildingIndustrialComplexes;
-                        troopdouble = (BuildingIndustrialComplexesDouble*industryGovermentBonus);
+                        troopdouble = (BuildingIndustrialComplexesDouble*industryGovermentBonus*industrialDouble);
                         troopdouble *= 1.86;
                         troopint = troopdouble;
-                        tanksdouble = (BuildingIndustrialComplexesDouble*industryGovermentBonus);
+                        tanksdouble = (BuildingIndustrialComplexesDouble*industryGovermentBonus*industrialDouble);
                         tanksdouble *= 0.4;
                         tanksint = tanksdouble;
 
                         //int trooprevenue = troopint*priceTroops;
                         //int jetsrevenue = troopint*priceJets;
-                        std::cout << "Troops per turn " << troopint  << " Troops revenue " << troopint*priceTroops << std::endl;
-                        std::cout << "Jets per turn " << troopint << " Jets revenue " << troopint*priceJets  << std::endl;
-                        std::cout << "Turrets per turn " << troopint <<  " Turrets revenue " << troopint*priceTanks<< std::endl;
-                        std::cout << "Tanks per turn " << tanksint << " Tanks revenue " << tanksint*priceTanks <<  std::endl;
-
+                        std::cout << "Troops per turn " << troopint << " Profit from troops per turn= " << troopint*priceTroops << std::endl;
+                        std::cout << "Jets per turn " << troopint << " Profit from jets per turn= " << troopint*priceJets << std::endl;
+                        std::cout << "Turrets per turn " << troopint << " Profit from turrets per turn= " << troopint*priceTurrets << std::endl;
+                        std::cout << "Tanks per turn " << tanksint <<  " Profit from turrets per turn= " << troopint*priceTanks << std::endl;
+			
+			
+			MakeMoney();	
                         continue;
 
 case(200):
                         std::cout << militaryExpencesmoney(troops,jets, turrets , tanks ,spies , Networthint  );
+                        MakeMoney();
                         continue;
 
 
 case(999):
+                      MakeMoney();
                       exit(0);
 
-case(1000):
+case(102):
                      //int priceTroops = 0;
                      //int priceJets = 0;
                      //int priceTanks = 0;
@@ -558,7 +580,7 @@ case(1000):
     std::cin >> priceJets;
     std::cin >> priceTurrets;
     std::cin >> priceTanks;
-
+    MakeMoney();
     continue;
 }
                     /*

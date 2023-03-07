@@ -32,3 +32,17 @@ int palautus = temp;
 std::cout << "militaryExpencesmoney =" << palautus << std::endl;
 return(amountTroops+amountJets+amountTurrets+amountTanks);
 }
+
+int militaryFoodConsumption(int troops, int jets, int turrets , int tanks , int spies){
+
+double foodComption;
+foodComption = troops*0.001;
+foodComption += jets*0.001;
+foodComption += turrets*0.001;
+foodComption += tanks*0.003;
+foodComption += spies*0.005;
+
+int Food;
+Food = foodComption;
+return Food;
+}

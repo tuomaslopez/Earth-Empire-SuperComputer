@@ -29,3 +29,19 @@ else {
     return 1.5;
 }
 }
+
+
+double GovermentIndustry(std::string Goverment){
+
+std::cout << "Goveverment = " << Goverment << std::endl;
+	if (Goverment != "Communisim"){
+	    puts("GovermentPop returns 1");
+	    return 1.35;
+	}
+	else{
+	return 1.0;
+	}
+
+
+}
+

@@ -82,3 +82,4 @@ int strToint(std::string str){
     }
     return palautus;
 }
+

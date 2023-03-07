@@ -8,4 +8,6 @@ double Govermentmilitary(std::string Goverment);
 
 double GovermentPop(std::string Goverment);
 
+double GovermentIndustry(std::string Goverment);
+
 

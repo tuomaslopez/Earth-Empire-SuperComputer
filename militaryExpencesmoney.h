@@ -7,3 +7,5 @@
 
 int militaryExpencesmoney(int troops, int jets, int turrets , int tanks , int spies, double networth);
 
+int militaryFoodConsumption(int troops, int jets, int turrets , int tanks , int spies);
+
