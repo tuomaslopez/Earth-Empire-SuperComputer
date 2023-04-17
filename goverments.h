@@ -11,3 +11,5 @@ double GovermentPop(std::string Goverment);
 double GovermentIndustry(std::string Goverment);
 
 double GovermentFarming(std::string Goverment);
+
+double GovermentOil(std::string Goverment);

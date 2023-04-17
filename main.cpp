@@ -94,6 +94,7 @@ int main(int argc, char *argv[])
    std::string agriculturalTechString = "";
    int agriculturalStringSize = 0;
    int agriculturalInt = 0;
+static std::string oilRigsString = "";   
 static std::string enemyGoverment;
 static double enemyDefence;
 static double enemyGovermnetMilitaryBonus = 1.00;
@@ -230,7 +231,18 @@ case(1):
                         
                         }
                         std::cin >> farms;
-			std::cout << " FARMS IS LINE 227 = " << farms << std::endl;
+			//td::cout << " FARMS IS LINE 227 = " << farms << std::endl;
+                        
+                        while( temp2 != "Rigs"){
+			std::cin >> temp2 ;
+			//std::cout << " Line 250 temp2=" << temp2 << std::endl; 
+			
+			}
+			std::cin >> oilRigsString;
+			//std::cout << "OilRigs is=" << oilRigsString << std::endl;
+
+                        
+                        
                         while( temp2 != "Business"){
                         std::cin >> temp2 ;
                         }
@@ -243,7 +255,8 @@ case(1):
                         businessTech = businessInt;
                         businessTech /= 1000;
 
-
+			
+						
                         while( temp2 != "Residential"){
                         std::cin >> temp2 ;
                         }
@@ -269,7 +282,7 @@ case(1):
                         agriculturalInt = strToint(agriculturalTechString);
                         agrciculturaTech = agriculturalInt;
                         agrciculturaTech/= 1000;
-			std::cout << " Agricultural Tech double=" << agrciculturaTech << std::endl;
+			//std::cout << " Agricultural Tech double=" << agrciculturaTech << std::endl;
 
 
 

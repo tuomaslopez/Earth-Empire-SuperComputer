@@ -56,4 +56,18 @@ puts("GovermentFarming returns 1.0");
 return 1.0;
 }
 
+double GovermentOil(std::string Goverment){
+
+std::cout << "Goveverment = " << Goverment << std::endl;
+if (Goverment == "Fascism"){
+	    puts("GovermentOil returns 1.75");
+	    return 1.75;
+	}
+puts("GovermentOil returns 1.0");
+return 1.0;
+}
+
+
+
+
 
