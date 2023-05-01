@@ -90,6 +90,8 @@ int main(int argc, char *argv[])
    std::string farms;
    int FarmProduction;
    FarmProduction = 0;
+   int SpyTechInt = 1;
+   double spyTechDouble = 1.00;
    int Farmint = 0;
    std::string agriculturalTechString = "";
    int agriculturalStringSize = 0;
@@ -101,6 +103,7 @@ static double enemyGovermnetMilitaryBonus = 1.00;
 static unsigned int command;
 static double BuildingResidences; // oli double
 static double BuildingIndustrialComplexes;
+static std::string SpyTechString = "";
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
@@ -310,7 +313,25 @@ case(1):
                        industrialDouble = industrialInt;
                        industrialDouble = industrialDouble/10000;
                        
+                       
+                       
+                       
+                       while( temp2 != "Spy"){
+                       std::cin >> temp2;
+                       }
+                       std::cin >> tempString;
+                       std::cin >> SpyTechString;
+                       SpyTechInt = strToint(SpyTechString);
+                       spyTechDouble = SpyTechInt;
+                       spyTechDouble = spyTechDouble/10000;
+                       
+                       
+                       
+                       
                        //while( temp2 != "Per"){
+                       
+                       
+                       
                        // std::cin >> temp2 ;
                        // }
                         //std::cin >> tempString;
@@ -399,6 +420,9 @@ case(1):
                         std::cout << "Weapon String is " << '"' << weaponTechString << '"' << std::endl;
                         std::cout << "Weapon Tech double is " << weaponDouble << std::endl;
                         std::cout << "Industrial Tech double is " << industrialDouble << std::endl;
+                        std::cout << "Spy tech double is " << spyTechDouble << std::endl;
+                        std::cout << "Spies are " << spies << std::endl;
+                        std::cout << "Spy strenght is = " <<  spies*Govermentspy(govermentString)*spyTechDouble << std::endl;
                         std::cout << "Troops are " << troops << std::endl;
                         std::cout << "Jets are " << jets << std::endl;
                         std::cout << "Tanks are " << tanks << std::endl;
@@ -468,7 +492,7 @@ case(1):
                         //process->start(program);
                         //}
 
-                         //QDesktopServices::openUrl(QUrl("http://www.googleadservices.com/pagead/aclk?sa=L&ai=CMHo6PutyUMrTD668yAPbtoCoBpqPtf8Cqv6NjTjy25OxmQEQASDnjKQiUIu1yPX9_____wFg9_ncgsgJoAHu__XcA8gBCakC3h3Xjvu5tT6oAwGqBHxP0IJ2JrvxhInOv5Vj4rtZQjS56ccgTmh3YeFBOjpWeLzdE5SlhwFeYEBDR0-g1Qa4FSOosSMbrThGOlCbnoJIi46uFxqOVVE9_1j0aFv6TzBUKxr1H1ImuoPnIZR69S2SGZe2xTYGgB5z-oUok03FiSOGioRg2teyUEI4iAYBoAYR&num=1&cid=5GgTcH7wAr9TTqxGCV4aWW6I&sig=AOD64_0TIv8bYHFYAhX0duZV0cNIJWq5Bg&client=ca-pub-2658423091642646&adurl=http%3A%2F%2Fad-emea.doubleclick.net/click%3Bh%3Dv8/3d08/2/0/%2a/g%3B261938130%3B1-0%3B0%3B85944834%3B2321-160/600%3B50286562/50273240/1%3B%3B%7Esscs%3D%3fhttp://www.zalando.fi/mbox-ons-clothing-women/?wmc=DIS358_RH_FI_1881756."));
+                         
 
                          //process->start(profitProgram); // cannot open 2 firefox apps at the same time
 
@@ -602,7 +626,7 @@ case(101):
                         std::cout << "Troops per turn " << troopint << " Profit from troops per turn= " << troopint*priceTroops << std::endl;
                         std::cout << "Jets per turn " << troopint << " Profit from jets per turn= " << troopint*priceJets << std::endl;
                         std::cout << "Turrets per turn " << troopint << " Profit from turrets per turn= " << troopint*priceTurrets << std::endl;
-                        std::cout << "Tanks per turn " << tanksint <<  " Profit from turrets per turn= " << troopint*priceTanks << std::endl;
+                        std::cout << "Tanks per turn " << tanksint <<  " Profit from turrets per turn= " << tanksint*priceTanks << std::endl;
 			
 			
 			MakeMoney();	
