@@ -69,5 +69,19 @@ return 1.0;
 
 
 
+double Govermentspy(std::string Goverment){
+    std::cout << "Goveverment = " << Goverment << std::endl;
+    if (Goverment != "Dictatorship"){
+        puts("Govermentspy returns 1");
+        return 1;
+    }
+    else {
+        puts("Govermentspy returns 1.30");
+        return 1.30;
+    }
+}
+
+
+
 
 

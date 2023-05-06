@@ -13,3 +13,6 @@ double GovermentIndustry(std::string Goverment);
 double GovermentFarming(std::string Goverment);
 
 double GovermentOil(std::string Goverment);
+
+double Govermentspy(std::string Goverment);
+
