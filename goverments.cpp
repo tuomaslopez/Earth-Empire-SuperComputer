@@ -7,10 +7,18 @@
 
 double Govermentmilitary(std::string Goverment){
     std::cout << "Goveverment = " << Goverment << std::endl;
+    
+    if (Goverment == "Republic"){
+    
+    	puts("Govermentmilitary returns 0.9");
+    	return 0.90;
+    }
+    
     if (Goverment != "Dictatorship"){
         puts("Govermentmilitary returns 1");
         return 1;
     }
+    
     else {
         puts("Govermentmilitary returns 1.25");
         return 1.25;
@@ -81,7 +89,23 @@ double Govermentspy(std::string Goverment){
     }
 }
 
+double GovermentWeaponsTech(std::string Goverment, int land){
+	double GvtTech = 1.0;
+	double GvtEff  = 1.0;
 
+	if (Goverment != "Democracy"){        
+	    GvtTech = 1.1;
+	}
+	    
+	if (Goverment != "Theocracy"){        
+	    GvtTech = 0.65;
+	}
 
-
-
+	if (Goverment != "Communisim"){        
+	    GvtEff  = 1.2;
+	}
+//(1.0+(1.50*GvtTech-1.00)GvtTech*(1-) TODO
+   puts("TODO");
+   return 1.0;
+  
+}
