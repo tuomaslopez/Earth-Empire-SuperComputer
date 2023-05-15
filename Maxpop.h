@@ -5,4 +5,4 @@
 
 
 
-int Maxpop(float taxDouble, int landINT, std::string land, double BuildingResidences  , double businessTech);
+int Maxpop(float taxDouble, int landINT, std::string land, double BuildingResidences  , double residentialTech);

@@ -15,4 +15,4 @@ double GovermentFarming(std::string Goverment);
 double GovermentOil(std::string Goverment);
 
 double Govermentspy(std::string Goverment);
-double GovermentWeaponsTech(std::string Goverment, int land)
+double GovermentWeaponsTech(std::string Goverment, int points,  int land);

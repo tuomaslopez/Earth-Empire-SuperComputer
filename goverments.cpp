@@ -3,8 +3,8 @@
 
 #include <string>
 #include <cstdio>
-#include  <iostream>
-
+#include <iostream>
+#include <math.h>
 double Govermentmilitary(std::string Goverment){
     std::cout << "Goveverment = " << Goverment << std::endl;
     
@@ -89,22 +89,22 @@ double Govermentspy(std::string Goverment){
     }
 }
 
-double GovermentWeaponsTech(std::string Goverment, int land){
+double GovermentWeaponsTech(std::string Goverment, int points , int land){
 	double GvtTech = 1.0;
 	double GvtEff  = 1.0;
 
-	if (Goverment != "Democracy"){        
+	if (Goverment == "Democracy"){        
 	    GvtTech = 1.1;
 	}
 	    
-	if (Goverment != "Theocracy"){        
+	if (Goverment == "Theocracy"){        
 	    GvtTech = 0.65;
 	}
 
-	if (Goverment != "Communisim"){        
+	if (Goverment == "Communisim"){        
 	    GvtEff  = 1.2;
 	}
-//(1.0+(1.50*GvtTech-1.00)GvtTech*(1-) TODO
+ //std::cout << "military tech " << (1.0+(1.50*GvtTech-1.00)*GvtTech*(exp(2.71828)-1.0*points/(780+5.75*land)) << std::endl; 
    puts("TODO");
    return 1.0;
   

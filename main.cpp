@@ -77,6 +77,91 @@ int main(int argc, char *argv[])
    static int residenialStringSize = 0;
    static int residentialInt = 0;
    static double returnPop = 0;
+   static double returnPop1 = 0;
+   static double returnPop2 = 0;
+   static double returnPop3 = 0;
+   static double returnPop4 = 0;
+   static double returnPop5 = 0;
+   static double returnPop6 = 0;
+   static double returnPop7 = 0;
+   static double returnPop8 = 0;
+   static double returnPop9 = 0;
+   static double returnPop10 = 0;
+   static double returnPop11 = 0;
+   static double returnPop12 = 0;
+   static double returnPop13 = 0;
+   static double returnPop14 = 0;
+   static double returnPop15 = 0;
+   static double returnPop16 = 0;
+   static double returnPop17 = 0;
+   static double returnPop18 = 0;
+   static double returnPop19 = 0;
+   static double returnPop20 = 0;
+   static double returnPop21 = 0;
+   static double returnPop22 = 0;
+   static double returnPop23 = 0;
+   static double returnPop24 = 0;
+   static double returnPop25 = 0;
+   static double returnPop26 = 0;
+   static double returnPop27 = 0;
+   static double returnPop28 = 0;
+   static double returnPop29 = 0;
+   static double returnPop30 = 0;
+   static double returnPop31 = 0;
+   static double returnPop32 = 0;
+   static double returnPop33 = 0;
+   static double returnPop34 = 0;
+   static double returnPop35 = 0;
+   static double returnPop36 = 0;
+   static double returnPop37 = 0;
+   static double returnPop38 = 0;
+   static double returnPop39 = 0;
+   static double returnPop40 = 0;
+   static double returnPop41 = 0;
+   static double returnPop42 = 0;
+   static double returnPop43 = 0;
+   static double returnPop44 = 0;
+   static double returnPop45 = 0;
+   static double returnPop46 = 0;
+   static double returnPop47 = 0;
+   static double returnPop48 = 0;
+   static double returnPop49 = 0;
+   static double returnPop50 = 0;
+   static double returnPop51 = 0;
+   static double returnPop52 = 0;
+   static double returnPop53 = 0;
+   static double returnPop54 = 0;
+   static double returnPop55 = 0;
+   static double returnPop56 = 0;
+   static double returnPop57 = 0;
+   static double returnPop58 = 0;
+   static double returnPop59 = 0;
+   static double returnPop60 = 0;
+   static double returnPop61 = 0;
+   static double returnPop62 = 0;
+   static double returnPop63 = 0;
+   static double returnPop64 = 0;
+   static double returnPop65 = 0;
+   static double returnPop66 = 0;
+   static double returnPop67 = 0;
+   static double returnPop68 = 0;
+   static double returnPop69 = 0;
+   static double returnPop70 = 0;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    static int landINT = 0;
    static double revenue = 0;
    static std::string GDPpopString = "";
@@ -136,6 +221,7 @@ std::cout << "101 to see revenue with a tax rate, use after advisor page" << std
 std::cout << "102 to manually add prices for troops,turrets and tanks " << std::endl;
 std::cout << "103 see how many Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
 std::cout << "104 to see farm production and profit for selling food " << std::endl;
+std::cout << "500 tool, to find mex profit with tax rate while cashing" << std::endl;
 std::cout << "999 to exit" << std::endl;
 
 
@@ -451,64 +537,12 @@ case(1):
                         std::cout << "Networth String  is " << NetworthString << std::endl;
                         std::cout << "Networth is " << Networthint << std::endl;
                         //std::cout << "t is tax how much make eventally running a turn with cash on, taking to acount for the price of food " << taxDouble << '\n';
-                        //std::cout << "Insert to wolfram alpha: max " << "1.2t*" << "(22.5*(1.0-t)*(1.0+((" << Networthint << "/" << land << ")/90000)) * (1 + (2 * (" << BuildingResidences << "/" << land << ")))" <<"*" << "((1-0.95*" << "t" << ")*(24*" << BuildingResidences <<"+12*" << land <<") )*" << businessTech << "*" << residentialTech;
-                        //std::cout << "-0.03*(" << foodPrice << ")" << "*" << "((1-0.95*" << "t)" <<"(24*" << BuildingResidences <<"+12*" << land <<") )*" << residentialTech << std::endl;
-                        //std::cout << "ta income as String " << PerCapitaIncomeString << std::endl;
-                        //double perCapitaIncomeDouble = 0;
+                       
 
                         std::cout << "Take of the part starting with -0.03 to optimise without counting how much food you need (This tells the opitimal revenue before expensies) " << NetworthString << std::endl;
                         std::cout << "Networth as String " << NetworthString << std::endl;
                         
-			
-
-                        
-                        //std::cout << "Insert y to open wolframampha in Linux, n as no" << std::endl;
-                        //std::cin >> tempString ;
-                        //program = "firefox http://www.wolframalpha.com/input/?i=max";
-                        //program.append("1.2t*");
-                        //program.append("22.5*(1.0-t)*(1.0%2B((");
-                        //temp2 = doubleToString(Networthint);
-                        //temp999 = QString::fromStdString(temp2);
-                        //program.append(temp999);
-                        //program.append('/');
-                        //temp999 = QString::fromStdString(land);
-                        //program << land;
-                        //program.append(temp999);
-                        //program.append(")/90000))");
-                        //temp999 = QString::fromStdString("*(1%2B(2*(");
-                        //program.append(temp999);
-                        //temp2 = doubleToString(BuildingResidences);
-                        //temp999 =  QString::fromStdString(temp2);
-                        //program.append(temp999);
-                        //program.append("/");
-                        //temp500 = strToint(land);
-                        //temp600 = temp500;
-                        //landstring = doubleToString(temp600);
-                        //temp999 =  QString::fromStdString(landstring);
-                        //program.append(temp999);
-                        //program.append(")))");
-                        //program.append("*((1-0.95*t)*(24*");
-                        //temp2 = doubleToString(BuildingResidences);
-                        //temp999 =  QString::fromStdString(temp2);
-                        //program.append(temp999);
-                        //program.append("%2B12*");
-                        //temp999 =  QString::fromStdString(landstring);
-                        //program.append(temp999); // total land string
-                        //rogram.append("))");
-                        //temp2 = doubleToString(residentialTech);
-                        //temp999 =  QString::fromStdString(temp2);
-                        //program.append(temp999);
-                        //program.append("*");
-                        //temp2 = doubleToString(businessTech);
-                        //temp999 =  QString::fromStdString(temp2);
-                        //program.append(temp999);
-                        //program.append('"');
-                        //temp2 = program.toAscii();
-                        //std::cout << temp2 << std::endl;
-                        //if(tempString == "y"){
-                        //process->start(program);
-                        //}
-
+		
                          
 
                          //process->start(profitProgram); // cannot open 2 firefox apps at the same time
@@ -663,49 +697,24 @@ case(10):
                         continue;
 
 case(100):
-                        maxpopINT = Maxpop(taxDouble, landINT, land , BuildingResidences, businessTech);
+                        maxpopINT = Maxpop(taxDouble, landINT, land , BuildingResidences, residentialTech);
                         MakeMoney();
                         continue;
 
 case(101):
                         std::cout << "TAX, eg 0.33" << std::endl ;
                         std::cin >> taxDouble ;
-                        std::cout << "TAXDouble=" << taxDouble << std::endl;
                         landINT =strToint(land);
-                        std::cout << "land=" << land << std::endl;
-                        std::cout << "Residences=" << BuildingResidences << std::endl;
-                        std::cout << "Residency tech" << residentialTech << std::endl;
-                        returnPop = (BuildingResidences*24+12*landINT)*(1-0.95*taxDouble);
+                        
+                        returnPop = GovermentPop(govermentString)*(BuildingResidences*24+12*landINT)*(1-0.95*taxDouble);
                         returnPop *= residentialTech;
                         std::cout << "Returnpop=" << returnPop << std::endl ;
-                        std::cout << "GovermentPOP=" << GovermentPop(govermentString) << std::endl;
-                        returnPop = returnPop*(GovermentPop(govermentString));
+                        //std::cout << "GovermentPOP=" <<  << std::endl;
+                        
 
                         maxpopINT = returnPop ;
 
 
-
-                        // Put in comments in final version
-                        //std::cout << "businessTech "<<businessTech<< std::endl;
-                        //std::cout << "tax double"<<taxDouble << std::endl;
-                        //std::cout << "Networthint=" << Networthint << std::endl;
-                        //std::cout << "landINT=" << landINT << std::endl;
-                        //std::cout << "Max pop as int=" << maxpopINT << std::endl;
-                        //std::cout << "Building Residences" <<BuildingResidences <<std::endl;
-                        //std::cout << "aa=" << aa <<std::endl;
-                        //std::cout << "b=" << b  << std::endl;
-                        //std::cout << "c=" << c << std::endl;
-                        //std::cout << "d=" << d << std::endl;
-                        // Put in comments in final version
-
-
-                        //std::cout << double((Networthint/landINT)) << std::endl;
-
-                        
-                        //std::cout << "Per capita income="<<  GDPpopdouble << std::endl;
-			
-
-                        //std::cout << "Per capita income double=" << GDPpopdouble  << std::endl;
                         // Put in comments in final version
                         revenue =  maxpopINT*GDPpopdouble*taxDouble;
                         std::cout << " Are you using cashing? Type Y or N" << std::endl;
@@ -713,6 +722,10 @@ case(101):
                         if (usingCashing == 'Y'){
                             cashningBonus = 1.2;
                         }
+                        
+                        
+                        
+                        
                         std::cout << "Tax Revenues with max pop=" << cashningBonus*revenue <<  std::endl;
                         std::cout << "Food consumption from max pop=" << maxpopINT*0.03 << std::endl;
                         std::cout << "Food consumption from military=" << militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) << std::endl;
@@ -720,6 +733,124 @@ case(101):
                         std::cout << "Food cost from military((have you put the market value of food?)=" << foodPrice*militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) ;             
                     
                         std::cout << "Profit from pop after food cost=" << (cashningBonus*revenue-1.0*maxpopINT*0.03*foodPrice) << std::endl;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                        MakeMoney();
+                        continue;
+                        
+ case(500):             
+			puts("At this moment tells maximum pop with tax rate Line 749 in source");                       
+                        returnPop1 = Maxpop(0.01, landINT, land , BuildingResidences, residentialTech); 
+                        std::cout << "POP with 1% taxe rate " << returnPop1 << std::endl;
+                        returnPop2 = Maxpop(0.02, landINT, land , BuildingResidences, residentialTech); 
+                        std::cout << "POP with 2% taxe rate " << returnPop2 << std::endl;                       
+                        returnPop3 = Maxpop(0.03, landINT, land , BuildingResidences, residentialTech); 
+                        std::cout << "POP with 3% taxe rate " << returnPop3 << std::endl;
+                        returnPop4 = Maxpop(0.04, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 4% taxe rate " << returnPop4 << std::endl;
+                        returnPop5 = Maxpop(0.05, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 5% taxe rate " << returnPop5 << std::endl;
+                        returnPop6 = Maxpop(0.06, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 6% taxe rate " << returnPop6 << std::endl;
+                        returnPop7 = Maxpop(0.07, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 7% taxe rate " << returnPop7 << std::endl;
+                        returnPop8 = Maxpop(0.08, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 8% taxe rate " << returnPop7 << std::endl;
+                        returnPop9 = Maxpop(0.09, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 9% taxe rate " << returnPop9 << std::endl;
+                        returnPop10 = Maxpop(0.10, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 10% taxe rate " << returnPop10 << std::endl;
+                        returnPop11 = Maxpop(0.11, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 11% taxe rate " << returnPop11 << std::endl;
+
+                        returnPop12 = Maxpop(0.12, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 12% taxe rate " << returnPop12 << std::endl;
+
+			returnPop13 = Maxpop(0.13, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 13% taxe rate " << returnPop13 << std::endl;
+
+			returnPop14 = Maxpop(0.14, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 14& taxe rate " << returnPop14 << std::endl;
+
+			returnPop15 = Maxpop(0.15, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 15& taxe rate " << returnPop15 << std::endl;
+
+
+
+			returnPop16 = Maxpop(0.16, landINT, land , BuildingResidences, residentialTech);					
+                        std::cout << "POP with 16& taxe rate " << returnPop16 << std::endl;	
+
+
+			returnPop17 = Maxpop(0.17, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 17& taxe rate " << returnPop17 << std::endl;
+			returnPop18 = Maxpop(0.18, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 18& taxe rate " << returnPop18 << std::endl;
+
+
+			returnPop19 = Maxpop(0.19, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 19& taxe rate " << returnPop18 << std::endl;
+
+			returnPop20 = Maxpop(0.20, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 20& taxe rate " << returnPop20 << std::endl;
+
+
+			returnPop30 = Maxpop(0.30, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 30% taxe rate " << returnPop30 << std::endl;
+
+			returnPop31 = Maxpop(0.31, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 31% taxe rate " << returnPop31 << std::endl;
+
+			returnPop32 = Maxpop(0.32, landINT, land , BuildingResidences, residentialTech);		
+                        std::cout << "POP with 32% taxe rate " << returnPop32 << std::endl;
+
+			returnPop33 = Maxpop(0.33, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 33% taxe rate " << returnPop33 << std::endl;
+			returnPop34 = Maxpop(0.34, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 34% taxe rate " << returnPop34 << std::endl;
+
+                        returnPop35 =Maxpop(0.35, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 35% taxe rate " << returnPop35 << std::endl;
+
+
+                        returnPop36 = Maxpop(0.36, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 36% taxe rate " << returnPop36 << std::endl;
+
+
+
+                        returnPop37 = Maxpop(0.37, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 37% taxe rate " << returnPop37 << std::endl;
+
+
+
+                        returnPop38 = Maxpop(0.38, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 38% taxe rate " << returnPop38 << std::endl;
+
+
+
+
+                        returnPop39 = Maxpop(0.39, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 39% taxe rate " << returnPop39 << std::endl;
+
+
+
+
+                        returnPop40 = Maxpop(0.40, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 40% taxe rate " << returnPop40 << std::endl;
+
+
+
+                        returnPop41 = Maxpop(0.41, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 41% taxe rate " << returnPop41 << std::endl;
+
+
+ 
                         MakeMoney();
                         continue;
  case(103):
