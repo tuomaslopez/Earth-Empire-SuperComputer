@@ -14,6 +14,7 @@
 #include <ctime>
 #include <time.h>
 #include "goverments.h"
+#include "food.h"
 int main(int argc, char *argv[])
 {
     //QCoreApplication a(argc, argv);
@@ -297,12 +298,12 @@ case(1):
                         }
                         std::cin >> govermentString;
 
-                        // This is area to modify so bonuses that change every round
+                        
                         if (govermentString == "Communism"){
 			    
                             industryGovermentBonus = GovermentIndustry("Communism");
                         }
-                        // This is area to modify so bonuses that change every round
+                        
                         while (temp2 != "Networth"){
                         std::cin >> temp2 ;
                         }
@@ -727,9 +728,9 @@ case(101):
                         
                         
                         std::cout << "Tax Revenues with max pop=" << cashningBonus*revenue <<  std::endl;
-                        std::cout << "Food consumption from max pop=" << maxpopINT*0.03 << std::endl;
+                        std::cout << "Food consumption from max pop=" << foodComsumptionPeople(maxpopINT) << std::endl;
                         std::cout << "Food consumption from military=" << militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) << std::endl;
-                        std::cout << "Food cost from pop(have you put the market value of food?)=" << maxpopINT*0.03*foodPrice << std::endl;
+                        std::cout << "Food cost from pop(have you put the market value of food?)=" << foodComsumptionPeople(maxpopINT)*foodPrice << std::endl;
                         std::cout << "Food cost from military((have you put the market value of food?)=" << foodPrice*militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) ;             
                     
                         std::cout << "Profit from pop after food cost=" << (cashningBonus*revenue-1.0*maxpopINT*0.03*foodPrice) << std::endl;
