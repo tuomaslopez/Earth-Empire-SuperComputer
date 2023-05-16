@@ -15,6 +15,7 @@
 #include <time.h>
 #include "goverments.h"
 #include "food.h"
+#include "pci.h"
 int main(int argc, char *argv[])
 {
     //QCoreApplication a(argc, argv);
@@ -149,6 +150,8 @@ int main(int argc, char *argv[])
    static double returnPop69 = 0;
    static double returnPop70 = 0;
    
+   
+   static double PCI40 = 0;
    
    
    
@@ -801,6 +804,25 @@ case(101):
 			returnPop20 = Maxpop(0.20, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 20& taxe rate " << returnPop20 << std::endl;
 
+			returnPop25 = Maxpop(0.25, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 25& taxe rate " << returnPop20 << std::endl;
+
+
+			returnPop26 = Maxpop(0.26, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 26& taxe rate " << returnPop26 << std::endl;
+
+
+			returnPop27 = Maxpop(0.27, landINT, land , BuildingResidences, residentialTech);					
+                        std::cout << "POP with 27& taxe rate " << returnPop27 << std::endl;
+
+			returnPop28 = Maxpop(0.28, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 28& taxe rate " << returnPop28 << std::endl;
+
+
+			returnPop29 = Maxpop(0.29, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 29& taxe rate " << returnPop29 << std::endl;
+
+
 
 			returnPop30 = Maxpop(0.30, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 30% taxe rate " << returnPop30 << std::endl;
@@ -845,13 +867,68 @@ case(101):
                         returnPop40 = Maxpop(0.40, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 40% taxe rate " << returnPop40 << std::endl;
 
+			PCI40 = PCI( 0.40,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+		
+
+		        std::cout << "PCI with 40% taxe rate " << PCI40 << std::endl;
+			
+			std::cout << "Taxe Revenue with 40% tax rate =" << 0.40*PCI40*returnPop40 << std::endl;
 
 
                         returnPop41 = Maxpop(0.41, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 41% taxe rate " << returnPop41 << std::endl;
 
+                        returnPop42 = Maxpop(0.42, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 42% taxe rate " << returnPop42 << std::endl;
 
+                        returnPop43 = Maxpop(0.43, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 43% taxe rate " << returnPop43 << std::endl;
  
+
+			returnPop44 = Maxpop(0.44, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 44% taxe rate " << returnPop44 << std::endl;
+
+
+
+			returnPop45 = Maxpop(0.45, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 45% taxe rate " << returnPop45 << std::endl;
+
+
+			returnPop46 = Maxpop(0.46, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 46% taxe rate " << returnPop46 << std::endl;
+
+
+			returnPop47 = Maxpop(0.47, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 47% taxe rate " << returnPop47 << std::endl;
+
+
+			returnPop48 = Maxpop(0.48, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 48% taxe rate " << returnPop48 << std::endl;
+
+
+
+			returnPop49 = Maxpop(0.49, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 49% taxe rate " << returnPop41 << std::endl;
+
+
+			returnPop50 = Maxpop(0.50, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 50% taxe rate " << returnPop50 << std::endl;
+
+			returnPop51 = Maxpop(0.51, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 51% taxe rate " << returnPop51 << std::endl;
+
+			returnPop52 = Maxpop(0.52, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 52% taxe rate " << returnPop52 << std::endl;
+
+			returnPop53 = Maxpop(0.53, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 53% taxe rate " << returnPop53 << std::endl;
+
+			returnPop54 = Maxpop(0.54, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 54% taxe rate " << returnPop54 << std::endl;
+
+			returnPop55 = Maxpop(0.55, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 55% taxe rate " << returnPop55 << std::endl;
+
                         MakeMoney();
                         continue;
  case(103):
