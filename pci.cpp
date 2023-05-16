@@ -11,6 +11,6 @@ double landDouble = Land;
 double enterpricesDouble = enterprices;
 
 
-return (22.5*(1-taxrate)*(1+((networhDouble/landDouble)/90000.0))*(1.0+(2.0*(enterpricesDouble/landDouble)))*bustech*GovermentPCI(goverment)) ;
+return (22.5*(1-taxrate)*(1+((networhDouble/landDouble)/18000.0))*(1.0+(2.0*(enterpricesDouble/landDouble)))*bustech*GovermentPCI(goverment)) ;
 
 }
