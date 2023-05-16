@@ -109,3 +109,25 @@ double GovermentWeaponsTech(std::string Goverment, int points , int land){
    return 1.0;
   
 }
+
+
+double GovermentPCI(std::string Goverment){
+
+
+ if (Goverment == "Republic"){
+    
+    	puts("GovermentmPCI 1.1");
+    	return 1.10;
+    }
+
+ return 1.0;
+}
+
+
+
+
+
+
+
+
+

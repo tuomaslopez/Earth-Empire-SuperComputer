@@ -16,3 +16,4 @@ double GovermentOil(std::string Goverment);
 
 double Govermentspy(std::string Goverment);
 double GovermentWeaponsTech(std::string Goverment, int points,  int land);
+double GovermentPCI(std::string Goverment);
