@@ -112,10 +112,10 @@ double GovermentWeaponsTech(std::string Goverment, int points , int land){
 
 
 double GovermentPCI(std::string Goverment){
-
-
+puts("Linie 115 Goorments.cpp");
+std::cout << "Goverment is=" << Goverment << std::endl;
  if (Goverment == "Republic"){
-    
+    	
     	puts("GovermentmPCI 1.1");
     	return 1.10;
     }

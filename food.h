@@ -1,5 +1,5 @@
-#ifndef Food_H
-#define Food_h
+#ifndef FOOD_H
+#define FOOD_H
 
 #endif //
 
