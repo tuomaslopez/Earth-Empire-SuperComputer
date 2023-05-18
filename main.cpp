@@ -151,6 +151,8 @@ int main(int argc, char *argv[])
    static double returnPop70 = 0;
    
    
+   static double PCI38 = 0;
+   static double PCI39 = 0;
    static double PCI40 = 0;
    
    
@@ -856,24 +858,42 @@ case(101):
                         std::cout << "POP with 38% taxe rate " << returnPop38 << std::endl;
 
 
+			PCI38 = PCI( 0.38,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+		
+
+		        std::cout << "PCI with 38% taxe rate " << PCI38 << std::endl;
+			
+			std::cout << "Tax Revenue with 38% tax rate =" << 0.38*PCI38*(returnPop38-2) << std::endl;
+			std::cout << "Tax revenue with 38% tax rate while cashing =" << 1.2*0.38*PCI38*(returnPop38-2) << std::endl;
+
+
 
 
                         returnPop39 = Maxpop(0.39, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 39% taxe rate " << returnPop39 << std::endl;
 
+			PCI39 = PCI( 0.39,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+		
+
+		        std::cout << "PCI with 39% taxe rate " << PCI39 << std::endl;
+			
+			std::cout << "Tax Revenue with 39% tax rate =" << 0.39*PCI39*(returnPop39-2) << std::endl;
+			std::cout << "Tax revenue with 39% tax rate while cashing =" << 1.2*0.39*PCI39*(returnPop40-2) << std::endl;
+
+
 
 
 
                         returnPop40 = Maxpop(0.40, landINT, land , BuildingResidences, residentialTech);
-                        std::cout << "POP with 40% taxe rate " << returnPop40 << std::endl;
+                        std::cout << "POP with 40% taxe rate " << (returnPop40-2) << std::endl;
 
 			PCI40 = PCI( 0.40,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 		
 
 		        std::cout << "PCI with 40% taxe rate " << PCI40 << std::endl;
 			
-			std::cout << "Taxe Revenue with 40% tax rate =" << 0.40*PCI40*returnPop40 << std::endl;
-
+			std::cout << "Tax Revenue with 40% tax rate =" << 0.40*PCI40*(returnPop40-2) << std::endl;
+			std::cout << "Tax revenue with 40% tax rate while cashing =" << 1.2*0.40*PCI40*(returnPop40-2) << std::endl;
 
                         returnPop41 = Maxpop(0.41, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 41% taxe rate " << returnPop41 << std::endl;
@@ -967,7 +987,7 @@ case(104):
 			FarmProduction = agrciculturaTech*5.3*Farmint*GovermentFarming(govermentString);
 			std::cout << " Farming Production per turn =" <<FarmProduction << std::endl;
 			std::cout << " Money for selling food on the market per turn =" << FarmProduction*foodPrice << std::endl;
-			MakeMoney;
+			MakeMoney();
 			continue;
 
 case(200):
