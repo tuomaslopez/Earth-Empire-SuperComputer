@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
    static double attack;
 
-
+   bool HasUserInputtedOwnMilitaryManagementPage = false;  
    static int maxpopINT = 0;
    static std::string temp2;
    static int foodPrice = 0;
@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
    static double returnPop69 = 0;
    static double returnPop70 = 0;
    
-   
+   static double PCI37 = 0;
    static double PCI38 = 0;
    static double PCI39 = 0;
    static double PCI40 = 0;
@@ -561,6 +561,7 @@ case(1):
 case(2):
                         std::cout << "Insert own military management" << std::endl;
                         temp2 == "2a";
+                        HasUserInputtedOwnMilitaryManagementPage = true;
                         while( temp2 != "Readiness:"){
                         std::cin >> temp2 ;
                         }       
@@ -678,23 +679,28 @@ case(4):
                         std::cin >> temp2 ;
                         }
                         
+                        if( HasUserInputtedOwnMilitaryManagementPage == false){
+                        puts(" You have not inserted own military management page, this may result in incorrect values for Jets needed to break with standard strike/10% more than needed Jets needed to break with standard strike/Jets neede to break with planned strike/10% Jets neede to break with planned strike");
+                        }
                         
-                        std::cout << "Enemy Goverment is = " << enemyGoverment << std::endl; 
-                        std::cout << "Enemy Troops is = " << enemyTroops << std::endl;; 
-                        std::cout << "Enemy Turrets is = " << enemyturrets << std::endl;;
-                        std::cout << "Enemy Tanks is = " << enemyTanks << std::endl;;
+                        //std::cout << "Enemy Goverment is = " << enemyGoverment << std::endl; 
+                        //std::cout << "Enemy Troops is = " << enemyTroops << std::endl;; 
+                        //std::cout << "Enemy Turrets is = " << enemyturrets << std::endl;;
+                        //std::cout << "Enemy Tanks is = " << enemyTanks << std::endl;;
                         enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!) = " << enemyDefence << std::endl;
+                        
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
-                        std::cout << " Jets needed to break with standard strike= " << (int(JetAttackNeededTobreak*1000)) << std::endl; 
-                        std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(JetAttackNeededTobreak*1.1*1000)) << std::endl;
-                        std::cout << " Jets neede to break with planned strike= " << (int(JetAttackNeededTobreak*1000)/1.5) << std::endl;
-                        std::cout << " 10% Jets neede to break with planned strike= " << (int(JetAttackNeededTobreak*1.1*1000)/1.5) << std::endl;
+                        std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
+                        std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
+                        std::cout << " Jets neede to break with planned strike= " << (int(1000*JetAttackNeededTobreak)/1.5) << std::endl;
+                        std::cout << " 10% Jets neede to break with planned strike= " << (int(1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
                         
                         //std::cin >> govermentString;
 
                         
-				
+			MakeMoney();
+			continue;	
 
 case(10):
                         std::cout << "Insert food Price, no $ sign" << std::endl;
@@ -851,6 +857,15 @@ case(101):
 
                         returnPop37 = Maxpop(0.37, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 37% taxe rate " << returnPop37 << std::endl;
+
+
+			PCI37 = PCI( 0.37,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+		
+
+		        std::cout << "PCI with 37% taxe rate " << PCI37 << std::endl;
+			
+			std::cout << "Tax Revenue with 37% tax rate =" << 0.38*PCI37*(returnPop37-2) << std::endl;
+			std::cout << "Tax revenue with 37% tax rate while cashing =" << 1.2*0.37*PCI37*(returnPop38-2) << std::endl;
 
 
 

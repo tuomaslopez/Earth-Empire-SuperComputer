@@ -6,34 +6,34 @@
 #include <iostream>
 #include <math.h>
 double Govermentmilitary(std::string Goverment){
-    std::cout << "Goveverment = " << Goverment << std::endl;
+    //std::cout << "Goveverment = " << Goverment << std::endl;
     
     if (Goverment == "Republic"){
     
-    	puts("Govermentmilitary returns 0.9");
+    //	puts("Govermentmilitary returns 0.9");
     	return 0.90;
     }
     
     if (Goverment != "Dictatorship"){
-        puts("Govermentmilitary returns 1");
+      //  puts("Govermentmilitary returns 1");
         return 1;
     }
     
     else {
-        puts("Govermentmilitary returns 1.25");
+        //puts("Govermentmilitary returns 1.25");
         return 1.25;
     }
 }
 
 
 double GovermentPop(std::string Goverment){
-    std::cout << "Goveverment = " << Goverment << std::endl;
+   // std::cout << "Goveverment = " << Goverment << std::endl;
 if (Goverment != "Theocracy"){
-    puts("GovermentPop returns 1");
+//    puts("GovermentPop returns 1");
     return 1;
 }
 else {
-    puts("GovermentPop returns 1.5");
+  //  puts("GovermentPop returns 1.5");
     return 1.5;
 }
 }
@@ -42,7 +42,7 @@ double GovermentIndustry(std::string Goverment)
 {
 std::cout << "Goveverment = " << Goverment << std::endl;
 	if (Goverment != "Communisim"){
-	    puts("GovermentPop returns 1");
+	    //puts("GovermentPop returns 1");
 	    return 1.35;
 	}
 	else{
@@ -57,7 +57,7 @@ double GovermentFarming(std::string Goverment){
 
 std::cout << "Goveverment = " << Goverment << std::endl;
 if (Goverment == "Fascism"){
-	    puts("GovermentFarming returns 1.15");
+	    //puts("GovermentFarming returns 1.15");
 	    return 1.15;
 	}
 puts("GovermentFarming returns 1.0");
@@ -66,9 +66,9 @@ return 1.0;
 
 double GovermentOil(std::string Goverment){
 
-std::cout << "Goveverment = " << Goverment << std::endl;
+//std::cout << "Goveverment = " << Goverment << std::endl;
 if (Goverment == "Fascism"){
-	    puts("GovermentOil returns 1.75");
+	    //puts("GovermentOil returns 1.75");
 	    return 1.75;
 	}
 puts("GovermentOil returns 1.0");
@@ -105,18 +105,18 @@ double GovermentWeaponsTech(std::string Goverment, int points , int land){
 	    GvtEff  = 1.2;
 	}
  //std::cout << "military tech " << (1.0+(1.50*GvtTech-1.00)*GvtTech*(exp(2.71828)-1.0*points/(780+5.75*land)) << std::endl; 
-   puts("TODO");
+   //puts("TODO");
    return 1.0;
   
 }
 
 
 double GovermentPCI(std::string Goverment){
-puts("Linie 115 Goorments.cpp");
-std::cout << "Goverment is=" << Goverment << std::endl;
+//puts("Linie 115 Goorments.cpp");
+//std::cout << "Goverment is=" << Goverment << std::endl;
  if (Goverment == "Republic"){
     	
-    	puts("GovermentmPCI 1.1");
+    	//puts("GovermentmPCI 1.1");
     	return 1.10;
     }
 
