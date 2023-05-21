@@ -474,10 +474,10 @@ case(1):
 
                         while( temp2 != "Spies"){
                         std::cin >> temp2;
-                        std::cout << "Loop for looking spie number, advisor loop " << temp2 << std::endl;
+                        //std::cout << "Loop for looking spie number, advisor loop " << temp2 << std::endl;
                         }
                         std::cin >> SpiesComa;
-                        std::cout << "Spies with coma are " << SpiesComa << std::endl;
+                        //std::cout << "Spies with coma are " << SpiesComa << std::endl;
                         temp2 = "!!!";
                         spies = strToint(SpiesComa);
                         while( temp2 != "Troops"){
@@ -512,26 +512,26 @@ case(1):
                        // std::cout << "In last loop" << std::endl;
                         }
 
-                        std::cout << "Goverment is " << govermentString << "\n";
-                        std::cout << "land is " << land << "\n";
-                        std::cout << "Residences are " <<  BuildingResidences << "\n";
+                        //std::cout << "Goverment is " << govermentString << "\n";
+                        //std::cout << "land is " << land << "\n";
+                        //std::cout << "Residences are " <<  BuildingResidences << "\n";
 
-                        std::cout << "Goverment is " << govermentString << "\n";
-                        std::cout << "land is " << land << "\n";
-                        std::cout << "Residences are " <<  BuildingResidences << "\n";
-                        std::cout << "Industrial Complexes are " << BuildingIndustrialComplexes << std::endl;
-                        std::cout << "Temp String is " << '"' << tempString << '"' << std::endl;
-                        std::cout << "Business tech is=" << businessTech << std::endl;
-                        std::cout << "Residential tech is=" << residentialTech << std::endl;
-                        std::cout << "Weapon String is " << '"' << weaponTechString << '"' << std::endl;
-                        std::cout << "Weapon Tech double is " << weaponDouble << std::endl;
-                        std::cout << "Industrial Tech double is " << industrialDouble << std::endl;
-                        std::cout << "Spy tech double is " << spyTechDouble << std::endl;
-                        std::cout << "Spies are " << spies << std::endl;
-                        std::cout << "Spy strenght is = " <<  spies*Govermentspy(govermentString)*spyTechDouble << std::endl;
-                        std::cout << "Troops are " << troops << std::endl;
-                        std::cout << "Jets are " << jets << std::endl;
-                        std::cout << "Tanks are " << tanks << std::endl;
+                        //std::cout << "Goverment is " << govermentString << "\n";
+                        //std::cout << "land is " << land << "\n";
+                        //std::cout << "Residences are " <<  BuildingResidences << "\n";
+                        //std::cout << "Industrial Complexes are " << BuildingIndustrialComplexes << std::endl;
+                        //std::cout << "Temp String is " << '"' << tempString << '"' << std::endl;
+                        //std::cout << "Business tech is=" << businessTech << std::endl;
+                        //std::cout << "Residential tech is=" << residentialTech << std::endl;
+                        //std::cout << "Weapon String is " << '"' << weaponTechString << '"' << std::endl;
+                        //std::cout << "Weapon Tech double is " << weaponDouble << std::endl;
+                        //std::cout << "Industrial Tech double is " << industrialDouble << std::endl;
+                        //std::cout << "Spy tech double is " << spyTechDouble << std::endl;
+                        //std::cout << "Spies are " << spies << std::endl;
+                        //std::cout << "Spy strenght is = " <<  spies*Govermentspy(govermentString)*spyTechDouble << std::endl;
+                        //std::cout << "Troops are " << troops << std::endl;
+                        //std::cout << "Jets are " << jets << std::endl;
+                        //std::cout << "Tanks are " << tanks << std::endl;
                         
                         attack = 2*jets+troops+4*tanks;
                         attack *= weaponDouble;
