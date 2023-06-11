@@ -26,136 +26,134 @@ int main(int argc, char *argv[])
    double industryGovermentBonus = 1.00;
    //static int money;
 
-   static std::string land;
-   static int spies;
-   static int troops;
-   static int enemyTroops;
-   static int jets;
-   static int turrets = 0;
-   static int enemyturrets = 0;
-   static int enemyTanks = 0;
+   std::string land;
+   int spies;
+   int troops;
+   int enemyTroops;
+   int jets;
+   int turrets = 0;
+   int enemyturrets = 0;
+   int enemyTanks = 0;
    double troopdouble = 0;
    double tanksdouble = 0;
 
-   static int tanks;
+   int tanks;
 
-   static double attack;
+   double attack;
 
    bool HasUserInputtedOwnMilitaryManagementPage = false;  
-   static int maxpopINT = 0;
-   static std::string temp2;
-   static int foodPrice = 0;
-   static float taxDouble = 0;
-   static double Networthint; // oli int
-   static std::string NetworthString;
-   static std::string govermentString;
-   static double residentialTech = 1.00;
-   static double businessTech = 1.00;
+   int maxpopINT = 0;
+   std::string temp2;
+   int foodPrice = 0;
+   float taxDouble = 0;
+   double Networthint; // oli int
+   std::string NetworthString;
+   std::string govermentString;
+   double residentialTech = 1.00;
+   double businessTech = 1.00;
   // static QString temp999;
-   static std::string landstring;
+   std::string landstring;
    //static int temp500;
    //static double temp600;
-   static std::string weaponTechString;
-   static std::string tempString;
-   static int weaponStringSize;
-   static double weaponDouble;
-   static int weaponInt;
-   static std::string TroopsComa;
-   static std::string EnemyTroopsComa;
-   static std::string SpiesComa;
-   static std::string JetsComa;
-   static std::string TurretsComa;
-   static std::string EnemyTurretsComa;
-   static std::string EnemyTurrentsComa;
-   static std::string EnemyTankscoma;
-   static std::string Tankscoma;
-   static std::string EnemyTanksComa;
-   static std::string businessTechString;
-   static std::string PerCapitaIncomeString;
-   static std::string readliness;
-   static int businessInt;
-   static int businessStringSize;
-   static std::string residentialTechString;
-   static int residenialStringSize = 0;
-   static int residentialInt = 0;
-   static double returnPop = 0;
-   static double returnPop1 = 0;
-   static double returnPop2 = 0;
-   static double returnPop3 = 0;
-   static double returnPop4 = 0;
-   static double returnPop5 = 0;
-   static double returnPop6 = 0;
-   static double returnPop7 = 0;
-   static double returnPop8 = 0;
-   static double returnPop9 = 0;
-   static double returnPop10 = 0;
-   static double returnPop11 = 0;
-   static double returnPop12 = 0;
-   static double returnPop13 = 0;
-   static double returnPop14 = 0;
-   static double returnPop15 = 0;
-   static double returnPop16 = 0;
-   static double returnPop17 = 0;
-   static double returnPop18 = 0;
-   static double returnPop19 = 0;
-   static double returnPop20 = 0;
-   static double returnPop21 = 0;
-   static double returnPop22 = 0;
-   static double returnPop23 = 0;
-   static double returnPop24 = 0;
-   static double returnPop25 = 0;
-   static double returnPop26 = 0;
-   static double returnPop27 = 0;
-   static double returnPop28 = 0;
-   static double returnPop29 = 0;
-   static double returnPop30 = 0;
-   static double returnPop31 = 0;
-   static double returnPop32 = 0;
-   static double returnPop33 = 0;
-   static double returnPop34 = 0;
-   static double returnPop35 = 0;
-   static double returnPop36 = 0;
-   static double returnPop37 = 0;
-   static double returnPop38 = 0;
-   static double returnPop39 = 0;
-   static double returnPop40 = 0;
-   static double returnPop41 = 0;
-   static double returnPop42 = 0;
-   static double returnPop43 = 0;
-   static double returnPop44 = 0;
-   static double returnPop45 = 0;
-   static double returnPop46 = 0;
-   static double returnPop47 = 0;
-   static double returnPop48 = 0;
-   static double returnPop49 = 0;
-   static double returnPop50 = 0;
-   static double returnPop51 = 0;
-   static double returnPop52 = 0;
-   static double returnPop53 = 0;
-   static double returnPop54 = 0;
-   static double returnPop55 = 0;
-   static double returnPop56 = 0;
-   static double returnPop57 = 0;
-   static double returnPop58 = 0;
-   static double returnPop59 = 0;
-   static double returnPop60 = 0;
-   static double returnPop61 = 0;
-   static double returnPop62 = 0;
-   static double returnPop63 = 0;
-   static double returnPop64 = 0;
-   static double returnPop65 = 0;
-   static double returnPop66 = 0;
-   static double returnPop67 = 0;
-   static double returnPop68 = 0;
-   static double returnPop69 = 0;
-   static double returnPop70 = 0;
+   std::string weaponTechString;
+   std::string tempString;
+   int weaponStringSize;
+   double weaponDouble;
+   int weaponInt;
+   std::string TroopsComa;
+   std::string EnemyTroopsComa;
+   std::string SpiesComa;
+   std::string JetsComa;
+   std::string TurretsComa;
+   std::string EnemyTurretsComa;
+   std::string EnemyTurrentsComa;
+   std::string EnemyTankscoma;
+   std::string Tankscoma;
+   std::string EnemyTanksComa;
+   std::string businessTechString;
+   std::string PerCapitaIncomeString;
+   std::string readliness;
+   int businessInt;
+   int businessStringSize;
+   std::string residentialTechString;
+   int residenialStringSize = 0;
+   int residentialInt = 0;
+   double returnPop = 0;
+   double returnPop1 = 0;
+   double returnPop2 = 0;
+   double returnPop3 = 0;
+   double returnPop4 = 0;
+   double returnPop5 = 0;
+   double returnPop6 = 0;
+   double returnPop7 = 0;
+   double returnPop8 = 0;
+   double returnPop9 = 0;
+   double returnPop10 = 0;
+   double returnPop11 = 0;
+   double returnPop12 = 0;
+   double returnPop13 = 0;
+   double returnPop14 = 0;
+   double returnPop15 = 0;
+   double returnPop16 = 0;
+   double returnPop17 = 0;
+   double returnPop18 = 0;
+   double returnPop19 = 0;
+   double returnPop20 = 0;
+   double returnPop21 = 0;
+   double returnPop22 = 0;
+   double returnPop23 = 0;
+   double returnPop24 = 0;
+   double returnPop25 = 0;
+   double returnPop26 = 0;
+   double returnPop27 = 0;
+   double returnPop28 = 0;
+   double returnPop29 = 0;
+   double returnPop30 = 0;
+   double returnPop31 = 0;
+   double returnPop32 = 0;
+   double returnPop33 = 0;
+   double returnPop34 = 0;
+   double returnPop35 = 0;
+   double returnPop36 = 0;
+   double returnPop37 = 0;
+   double returnPop38 = 0;
+   double returnPop39 = 0;
+   double returnPop40 = 0;
+   double returnPop41 = 0;
+   double returnPop42 = 0;
+   double returnPop43 = 0;
+   double returnPop44 = 0;
+   double returnPop45 = 0;
+   double returnPop46 = 0;
+   double returnPop47 = 0;
+   double returnPop48 = 0;
+   double returnPop49 = 0;
+   double returnPop50 = 0;
+   double returnPop51 = 0;
+   double returnPop52 = 0;
+   double returnPop53 = 0;
+   double returnPop54 = 0;
+   double returnPop55 = 0;
+   double returnPop56 = 0;
+   double returnPop57 = 0;
+   double returnPop58 = 0;
+   double returnPop59 = 0;
+   double returnPop60 = 0;
+   double returnPop61 = 0;
+   double returnPop62 = 0;
+   double returnPop63 = 0;
+   double returnPop64 = 0;
+   double returnPop65 = 0;
+   double returnPop66 = 0;
+   double returnPop67 = 0;
+   double returnPop68 = 0;
+   double returnPop69 = 0;
+   double returnPop70 = 0;
    
-   static double PCI37 = 0;
-   static double PCI38 = 0;
-   static double PCI39 = 0;
-   static double PCI40 = 0;
-   
-   
+   double PCI37 = 0;
+   double PCI38 = 0;
+   double PCI39 = 0;
+   double PCI40 = 0;
    
    
    
@@ -168,11 +166,13 @@ int main(int argc, char *argv[])
    
    
    
-   static int landINT = 0;
-   static double revenue = 0;
-   static std::string GDPpopString = "";
-   static double GDPpopdouble = 0;
-   static int GDPpopint = 0;
+   
+   
+   int landINT = 0;
+   double revenue = 0;
+   std::string GDPpopString = "";
+   double GDPpopdouble = 0;
+   int GDPpopint = 0;
    char usingCashing  = 'N';
    double cashningBonus = 1.0;
    int PerCapita = 0;
@@ -196,17 +196,17 @@ int main(int argc, char *argv[])
    std::string agriculturalTechString = "";
    int agriculturalStringSize = 0;
    int agriculturalInt = 0;
-static double owredlinessdouble = 1.0;
-static int ownReadliness = 1;
-static std::string oilRigsString = "";   
-static std::string enemyGoverment;
-static double enemyDefence;
-static double enemyGovermnetMilitaryBonus = 1.00;
-static unsigned int command;
-static double BuildingResidences; // oli double
-static double BuildingIndustrialComplexes;
-static std::string SpyTechString = "";
-static double JetAttackNeededTobreak = 1;
+   double owredlinessdouble = 1.0;
+   int ownReadliness = 1;
+   std::string oilRigsString = "";   
+   std::string enemyGoverment;
+   double enemyDefence;
+   double enemyGovermnetMilitaryBonus = 1.00;
+   unsigned int command;
+   double BuildingResidences; // oli double
+   double BuildingIndustrialComplexes;
+   std::string SpyTechString = "";
+   double JetAttackNeededTobreak = 1;
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
@@ -218,8 +218,8 @@ std::cout << "insert command" << std::endl;
 //std::cout << "2: own reserch page" << std::endl;
 std::cout << "1. own default Adivisor page" << std::endl;
 std::cout << "2. own Military Management page" << std::endl;
-std::cout << "3: enemy military spy" << std::endl;
-std::cout << "4: enemy spy repots" << std::endl;
+//std::cout << "3: enemy military spy" << std::endl;
+std::cout << "3: enemy spy repots" << std::endl;
 std::cout << "10 manually insert food price for buying/selling food" << std::endl;
 //std::cout << "12 manually insert cash(not used anywhere)" << std::endl;
 std::cout << "100 see max pop with tax rate, use after advisor page " << std::endl;
@@ -462,9 +462,9 @@ case(1):
                         std::cout << "temp2 line276 " << temp2 << std::endl;
                         std::cout << " GDPpopString= " << GDPpopString << std::endl;
                         GDPpopint = strToint(GDPpopString);
-                        std::cout << "Line 281, GDPpopint = " << GDPpopint << std::endl; 
+                       // std::cout << "Line 281, GDPpopint = " << GDPpopint << std::endl; 
                         GDPpopdouble = (GDPpopint/100.0);
-                       	std::cout << "Line 283, GDPpodouble = " << GDPpopdouble << std::endl; 	
+                       //	std::cout << "Line 283, GDPpodouble = " << GDPpopdouble << std::endl; 	
                        //  while( temp2 != "Income")
 //
   //                      
@@ -536,17 +536,15 @@ case(1):
                         attack = 2*jets+troops+4*tanks;
                         attack *= weaponDouble;
                         attack *= Govermentmilitary(govermentString);
-                        std::cout << "Attack streght  " << attack << std::endl;
-                        puts( "Attack does not take into account reddiness TODO!!!!");
+                        //std::cout << "Attack streght  " << attack << std::endl;
                         
-
-                        std::cout << "Networth String  is " << NetworthString << std::endl;
-                        std::cout << "Networth is " << Networthint << std::endl;
+                        //std::cout << "Networth String  is " << NetworthString << std::endl;
+                        //std::cout << "Networth is " << Networthint << std::endl;
                         //std::cout << "t is tax how much make eventally running a turn with cash on, taking to acount for the price of food " << taxDouble << '\n';
                        
 
-                        std::cout << "Take of the part starting with -0.03 to optimise without counting how much food you need (This tells the opitimal revenue before expensies) " << NetworthString << std::endl;
-                        std::cout << "Networth as String " << NetworthString << std::endl;
+                       // std::cout << "Take of the part starting with -0.03 to optimise without counting how much food you need (This tells the opitimal revenue before expensies) " << NetworthString << std::endl;
+                        //std::cout << "Networth as String " << NetworthString << std::endl;
                         
 		
                          
@@ -579,53 +577,55 @@ case(2):
                         owredlinessdouble = (owredlinessdouble/1000);
                         std::cout << " Own readliness=" << owredlinessdouble << std::endl;
                         std::cout << " Own Attack=" << owredlinessdouble*attack << std::endl;
-                        
+                        MakeMoney();
                         continue;
                         
-                        
-case(3):
-                            std::cout << "Type enemy goverment name" << std::endl;
-                            std::cout << "Insert Dictatorship/Theocracy/Communisim/Fascism, type break, to return to main menu" << std::endl;
-                            std::cin >> enemyGoverment;
-                            if(enemyGoverment == "break"){
-                            continue;
-                            }
-                            enemyGovermnetMilitaryBonus = Govermentmilitary(enemyGoverment);
-                            std::cout << "Enemy Military Bonus " << enemyGovermnetMilitaryBonus << std::endl;
+                       
+//case(3):
+//                            std::cout << "Type enemy goverment name" << std::endl;
+//                            std::cout << "Insert Dictatorship/Theocracy/Communisim/Fascism, type break, to return to main menu" << std::endl;
+//                            std::cin >> enemyGoverment;
+//                            if(enemyGoverment == "break"){
+//                            continue;
+//                            }
+//                            enemyGovermnetMilitaryBonus = Govermentmilitary(enemyGoverment);
+//                            std::cout << "Enemy Military Bonus " << enemyGovermnetMilitaryBonus << std::endl;
 
 
 
 
-                            std::cout << "Insert military spy" << std::endl;
+//                            std::cout << "Insert military spy" << std::endl;//
                            
-                            while( temp2 != "Troops"){
-                            std::cin >> temp2;
-                            }
-                            std::cin >> enemyTroops;
-                            while( temp2 != "Turrets"){
-                            std::cin >> temp2;
-                            }
+//                            while( temp2 != "Troops"){
+//                            std::cin >> temp2;
+//                            }
+//                            std::cin >> enemyTroops;//
+//                            while( temp2 != "Turrets"){
+//                            std::cin >> temp2;
+//                            }
                             
-                            std::cin >> enemyturrets;
-
-                            while( temp2 != "Tanks"){
-                            std::cin >> temp2;
-                            }
+//                            std::cin >> enemyturrets;
+//
+//                            while( temp2 != "Tanks"){
+//                            std::cin >> temp2;
+ //                           }
                       
-                            std::cin >> enemyTanks;
+//                            std::cin >> enemyTanks;
+//
+//                            enemyDefence = enemyTroops+2*enemyturrets +4*enemyTanks;
+ //                           std::cout << "Enemy Defence before line 171" << enemyDefence << std::endl;
+  //                          enemyDefence *= enemyGovermnetMilitaryBonus;
+   //                         std::cout << "EneneGovermentMilitary Bonus=" << enemyGovermnetMilitaryBonus << std::endl;
+    //                         std::cout << "Your Attack with tech " << attack << std::endl;
+//                             std::cout << "Enemy Troops=" << enemyTroops << std::endl;
+//                             std::cout << "Enemy Turrets=" << enemyturrets << std::endl;
+//                             std::cout << "Enemy Tanks=" << enemyTanks << std::endl;
+//                             std::cout << "Enemy Defence without tech, with goverment " << enemyDefence << std::endl;
+//                             continue;
 
-                            enemyDefence = enemyTroops+2*enemyturrets +4*enemyTanks;
-                            std::cout << "Enemy Defence before line 171" << enemyDefence << std::endl;
-                            enemyDefence *= enemyGovermnetMilitaryBonus;
-                            std::cout << "EneneGovermentMilitary Bonus=" << enemyGovermnetMilitaryBonus << std::endl;
-                             std::cout << "Your Attack with tech " << attack << std::endl;
-                             std::cout << "Enemy Troops=" << enemyTroops << std::endl;
-                             std::cout << "Enemy Turrets=" << enemyturrets << std::endl;
-                             std::cout << "Enemy Tanks=" << enemyTanks << std::endl;
-                             std::cout << "Enemy Defence without tech, with goverment " << enemyDefence << std::endl;
-                             continue;
+//
 
-case(4):
+case(3):
 			std::cout << "Insert spy report" << std::endl;
 			
 			temp2 == "2a";
