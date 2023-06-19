@@ -693,8 +693,8 @@ case(3):
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
                         std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
                         std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
-                        std::cout << " Jets neede to break with planned strike= " << (int(1000*JetAttackNeededTobreak)/1.5) << std::endl;
-                        std::cout << " 10% Jets neede to break with planned strike= " << (int(1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
+                        std::cout << " Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
+                        std::cout << " 10% Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
                         
                         //std::cin >> govermentString;
 
