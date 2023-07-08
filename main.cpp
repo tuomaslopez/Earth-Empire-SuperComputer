@@ -864,8 +864,8 @@ case(101):
 
 		        std::cout << "PCI with 37% taxe rate " << PCI37 << std::endl;
 			
-			std::cout << "Tax Revenue with 37% tax rate =" << 0.38*PCI37*(returnPop37-2) << std::endl;
-			std::cout << "Tax revenue with 37% tax rate while cashing =" << 1.2*0.37*PCI37*(returnPop38-2) << std::endl;
+			std::cout << "Tax Revenue with 37% tax rate =" << 0.37*PCI37*(returnPop37-2) << std::endl;
+			std::cout << "Tax revenue with 37% tax rate while cashing =" << 1.2*0.37*PCI37*(returnPop37-2) << std::endl;
 
 
 
