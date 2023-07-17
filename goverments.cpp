@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <iostream>
 #include <math.h>
+#include <cmath>
 double Govermentmilitary(std::string Goverment){
     //std::cout << "Goveverment = " << Goverment << std::endl;
     
@@ -104,9 +105,16 @@ double GovermentWeaponsTech(std::string Goverment, int points , int land){
 	if (Goverment == "Communisim"){        
 	    GvtEff  = 1.2;
 	}
- //std::cout << "military tech " << (1.0+(1.50*GvtTech-1.00)*GvtTech*(exp(2.71828)-1.0*points/(780+5.75*land)) << std::endl; 
+	
+	if (points != 0){
+	std::cout << "points is not 0, this part of the code has not been player tested" << std::endl;
+	}
+	
+	
+    std::cout << "military tech (if this value is not 1.0, it has not been player tested yet=" << (1.0+(1.50*GvtTech-1.00)*GvtTech*(exp(2.71828)-1.0*points/(780+5.75*land))) << std::endl;
+     
    //puts("TODO");
-   return 1.0;
+   return (1.0+(1.50*GvtTech-1.00)*GvtTech*(exp(2.71828)-1.0*points/(780+5.75*land))) ;
   
 }
 
