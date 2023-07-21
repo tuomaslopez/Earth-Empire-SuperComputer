@@ -91,9 +91,10 @@ double Govermentspy(std::string Goverment){
 }
 
 double GovermentWeaponsTech(std::string Goverment, int points , int land){
+	std::cout << "GovermentWeaponsTech, Goverment = " << Goverment << " points in weapons = " << points << " land is = " << land << std::endl;
 	double GvtTech = 1.0;
 	double GvtEff  = 1.0;
-
+    std::cout << " inside GovermentWeaponsTech " << std::endl;
 	if (Goverment == "Democracy"){        
 	    GvtTech = 1.1;
 	}

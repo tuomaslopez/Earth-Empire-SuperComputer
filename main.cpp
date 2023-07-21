@@ -44,6 +44,12 @@ int main(int argc, char *argv[])
    bool HasUserInputtedOwnMilitaryManagementPage = false;  
    int maxpopINT = 0;
    std::string temp2;
+   std::string temp3;
+   std::string temp4;
+   std::string temp5;
+   temp3 = "";
+   temp4 = "";
+   temp5 = "";
    int foodPrice = 0;
    float taxDouble = 0;
    double Networthint; // oli int
@@ -58,8 +64,11 @@ int main(int argc, char *argv[])
    std::string weaponTechString;
    std::string tempString;
    int weaponStringSize;
+   int EnemyweaponStringSize;
    double weaponDouble;
+   double enemyWeaponDouble;
    int weaponInt;
+   int enemyWeaponInt;
    std::string TroopsComa;
    std::string EnemyTroopsComa;
    std::string SpiesComa;
@@ -73,6 +82,7 @@ int main(int argc, char *argv[])
    std::string businessTechString;
    std::string PerCapitaIncomeString;
    std::string readliness;
+   std::string enemyLand;
    int businessInt;
    int businessStringSize;
    std::string residentialTechString;
@@ -167,7 +177,7 @@ int main(int argc, char *argv[])
    
    
    
-   
+   int enemyLandint = 1;
    int landINT = 0;
    double revenue = 0;
    std::string GDPpopString = "";
@@ -207,6 +217,9 @@ int main(int argc, char *argv[])
    double BuildingIndustrialComplexes;
    std::string SpyTechString = "";
    double JetAttackNeededTobreak = 1;
+   
+   std::string EnemyweaponTechString = "";
+   enemyLand = "";
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
@@ -646,6 +659,18 @@ case(3):
                         }
                      
                      
+                        while ( temp2 != "Land" ){
+                        std::cin >> temp2;
+                        std::cin >> temp3;
+                        //std::cin >> temp4;
+                        //std::cin >> temp5;
+                        }
+                        enemyLand = temp3;
+                        enemyLandint = strToint(enemyLand);
+                        
+                        
+                        
+                        
                         while( temp2 != "Troops"){
                         std::cin >> temp2;
                         }
@@ -668,6 +693,18 @@ case(3):
                         enemyTanks = strToint(EnemyTankscoma);
                         
                         
+                        while( temp2 != "Weapons"){
+                        std::cin >> temp2 ;
+                        }
+                        std::cin >> EnemyweaponTechString;
+                        //EnemyweaponStringSize = EnemyweaponTechString.size();
+                        //EnemyweaponStringSize--;
+                        //EnemyweaponTechString.erase(weaponStringSize);
+                        enemyWeaponInt = strToint(EnemyweaponTechString);
+                            
+                       
+                        
+                        
                         
                         temp2 == "2a";
                         while( temp2 != "About"){
@@ -687,8 +724,13 @@ case(3):
                         //std::cout << "Enemy Troops is = " << enemyTroops << std::endl;; 
                         //std::cout << "Enemy Turrets is = " << enemyturrets << std::endl;;
                         //std::cout << "Enemy Tanks is = " << enemyTanks << std::endl;;
+                        
+                        //GovermentWeaponsTech(std::string Goverment, int points , int land)
+                        std::cout << "Enemy points in weapons (NOT debugged yet) =" << enemyWeaponInt << std::endl;
+                        std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
+                        std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , 2296 ) << std::endl;
                         enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
-                        std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!) = " << enemyDefence << std::endl;
+                        std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!, enemy defence bonus not yet included) = " << enemyDefence << std::endl;
                         
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
                         std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
