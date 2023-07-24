@@ -217,6 +217,7 @@ int main(int argc, char *argv[])
    double BuildingIndustrialComplexes;
    std::string SpyTechString = "";
    double JetAttackNeededTobreak = 1;
+   std::string EnemyDefensiveBonus = "";
    
    std::string EnemyweaponTechString = "";
    enemyLand = "";
@@ -693,6 +694,14 @@ case(3):
                         enemyTanks = strToint(EnemyTankscoma);
                         
                         
+                        while( temp2 != "Bonus"){
+                        std::cin >> temp2 ;
+                        
+                        }
+                        std::cin >> EnemyDefensiveBonus;
+                        
+                        
+                        
                         while( temp2 != "Weapons"){
                         std::cin >> temp2 ;
                         }
@@ -728,7 +737,9 @@ case(3):
                         //GovermentWeaponsTech(std::string Goverment, int points , int land)
                         std::cout << "Enemy points in weapons (NOT debugged yet) =" << enemyWeaponInt << std::endl;
                         std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
-                        std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , 2296 ) << std::endl;
+                        std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
+                        std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
+                        
                         enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!, enemy defence bonus not yet included) = " << enemyDefence << std::endl;
                         
