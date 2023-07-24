@@ -94,6 +94,18 @@ double GovermentWeaponsTech(std::string Goverment, int points , int land){
 	std::cout << "GovermentWeaponsTech, Goverment = " << Goverment << " points in weapons = " << points << " land is = " << land << std::endl;
 	double GvtTech = 1.0;
 	double GvtEff  = 1.0;
+	double MaxTech = 1.0;
+	if (Goverment == "Democracy"){
+	
+	MaxTech = 1.55;
+	
+	}
+	
+	if (Goverment == "Theocracy"){
+	
+	MaxTech = 1.325;
+	
+	}
     std::cout << " inside GovermentWeaponsTech " << std::endl;
 	if (Goverment == "Democracy"){        
 	    GvtTech = 1.1;
