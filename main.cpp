@@ -218,7 +218,7 @@ int main(int argc, char *argv[])
    std::string SpyTechString = "";
    double JetAttackNeededTobreak = 1;
    std::string EnemyDefensiveBonus = "";
-   
+   int enemyDefenceBonusInt = 0;
    std::string EnemyweaponTechString = "";
    enemyLand = "";
 //QProcess *process = new QProcess();
@@ -700,7 +700,7 @@ case(3):
                         }
                         std::cin >> EnemyDefensiveBonus;
                         
-                        
+                        enemyDefenceBonusInt = strToint(EnemyDefensiveBonus);
                         
                         while( temp2 != "Weapons"){
                         std::cin >> temp2 ;
@@ -739,7 +739,7 @@ case(3):
                         std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
                         std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
                         std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
-                        
+                        std::cout << "Enemy defensive bonus as int =" << enemyWeaponInt << std::endl;
                         enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!, enemy defence bonus not yet included) = " << enemyDefence << std::endl;
                         
