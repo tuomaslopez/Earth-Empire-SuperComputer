@@ -219,8 +219,10 @@ int main(int argc, char *argv[])
    double JetAttackNeededTobreak = 1;
    std::string EnemyDefensiveBonus = "";
    int enemyDefenceBonusInt = 0;
+   double enemyDefenceBonusDouble = 1.00;
    std::string EnemyweaponTechString = "";
    enemyLand = "";
+   
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
@@ -740,6 +742,8 @@ case(3):
                         std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
                         std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
                         std::cout << "Enemy defensive bonus as int =" << enemyWeaponInt << std::endl;
+                        enemyDefenceBonusDouble += double(enemyWeaponInt);
+                        std::cout << "Enemy defensive bonus as double =" << enemyDefenceBonusDouble << std::endl;
                         enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!, enemy defence bonus not yet included) = " << enemyDefence << std::endl;
                         
