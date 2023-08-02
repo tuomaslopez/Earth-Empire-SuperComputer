@@ -741,8 +741,8 @@ case(3):
                         std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
                         std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
                         std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
-                        std::cout << "Enemy defensive bonus as int =" << enemyWeaponInt << std::endl;
-                        enemyDefenceBonusDouble += double(enemyWeaponInt);
+                        std::cout << "Enemy defensive bonus as int =" << enemyDefenceBonusInt << std::endl;
+                        enemyDefenceBonusDouble += double(enemyDefenceBonusInt);
                         std::cout << "Enemy defensive bonus as double =" << enemyDefenceBonusDouble << std::endl;
                         enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!, enemy defence bonus not yet included) = " << enemyDefence << std::endl;
