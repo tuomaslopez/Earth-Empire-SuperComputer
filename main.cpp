@@ -742,10 +742,12 @@ case(3):
                         std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
                         std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
                         std::cout << "Enemy defensive bonus as int =" << enemyDefenceBonusInt << std::endl;
-                        enemyDefenceBonusDouble += double(enemyDefenceBonusInt);
+                        enemyDefenceBonusDouble += double(enemyDefenceBonusInt)/1000;
                         std::cout << "Enemy defensive bonus as double =" << enemyDefenceBonusDouble << std::endl;
-                        enemyDefence = (1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
-                        std::cout << "Enemy defence is (no ENEMY techonology bonus yet in source code TODO!!!, enemy defence bonus not yet included) = " << enemyDefence << std::endl;
+                        enemyDefenceBonusDouble *=GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ); 
+                        std::cout << "Enemy defensive bonus as double (including technolog)=" << enemyDefenceBonusDouble << std::endl;
+                        enemyDefence = enemyDefenceBonusDouble*(1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
+                        std::cout << "Enemy defence is = " << enemyDefence << std::endl;
                         
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
                         std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
