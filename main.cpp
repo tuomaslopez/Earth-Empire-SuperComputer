@@ -160,6 +160,12 @@ int main(int argc, char *argv[])
    double returnPop69 = 0;
    double returnPop70 = 0;
    
+   
+   double PCI32 = 0;   
+   double PCI33 = 0;   
+   double PCI34 = 0;
+   double PCI35 = 0;
+   double PCI36 = 0;
    double PCI37 = 0;
    double PCI38 = 0;
    double PCI39 = 0;
@@ -900,19 +906,72 @@ case(101):
 			returnPop32 = Maxpop(0.32, landINT, land , BuildingResidences, residentialTech);		
                         std::cout << "POP with 32% taxe rate " << returnPop32 << std::endl;
 
+                      	PCI32 = PCI( 0.32,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+
+			std::cout << "Tax Revenue with 32% tax rate =" << 0.32*PCI32*(returnPop32) << std::endl;
+			std::cout << "Tax revenue with 32% tax rate while cashing =" << 1.2*0.32*PCI32*(returnPop32) << std::endl;
+  
+
+
+
+
+
 			returnPop33 = Maxpop(0.33, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 33% taxe rate " << returnPop33 << std::endl;
+                        
+                      	
+                      	
+                      	
+                      	
+                      	
+                      	
+                      	PCI33 = PCI( 0.33,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+
+			std::cout << "Tax Revenue with 33% tax rate =" << 0.33*PCI33*(returnPop33) << std::endl;
+			std::cout << "Tax revenue with 33% tax rate while cashing =" << 1.2*0.33*PCI33*(returnPop33) << std::endl;
+  
+                        
+                        
+                        
+                        
+                        
+                        
 			returnPop34 = Maxpop(0.34, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 34% taxe rate " << returnPop34 << std::endl;
 
+			PCI34 = PCI( 0.34,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+
+			std::cout << "Tax Revenue with 34% tax rate =" << 0.34*PCI34*(returnPop34) << std::endl;
+			std::cout << "Tax revenue with 34% tax rate while cashing =" << 1.2*0.34*PCI34*(returnPop34) << std::endl;
+
+
+
+			PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+
                         returnPop35 =Maxpop(0.35, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 35% taxe rate " << returnPop35 << std::endl;
+
+			PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+
+			std::cout << "Tax Revenue with 35% tax rate =" << 0.35*PCI35*(returnPop35-2) << std::endl;
+			std::cout << "Tax revenue with 35% tax rate while cashing =" << 1.2*0.35*PCI35*(returnPop35-2) << std::endl;
+
 
 
                         returnPop36 = Maxpop(0.36, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 36% taxe rate " << returnPop36 << std::endl;
 
+			PCI36 = PCI( 0.36,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+			
+			returnPop36 = Maxpop(0.36, landINT, land , BuildingResidences, residentialTech);
+			
+			std::cout << "POP with 36% taxe rate " << returnPop36 << std::endl;
+			
+			std::cout << "Tax Revenue with 36% tax rate =" << 0.36*PCI36*(returnPop36-2) << std::endl;
+			std::cout << "Tax revenue with 36% tax rate while cashing =" << 1.2*0.36*PCI36*(returnPop36-2) << std::endl;
 
+			
+			
 
                         returnPop37 = Maxpop(0.37, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 37% taxe rate " << returnPop37 << std::endl;
