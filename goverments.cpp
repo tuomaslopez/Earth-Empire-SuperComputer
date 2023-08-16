@@ -29,13 +29,20 @@ double Govermentmilitary(std::string Goverment){
 
 double GovermentPop(std::string Goverment){
    // std::cout << "Goveverment = " << Goverment << std::endl;
-if (Goverment != "Theocracy"){
+if (Goverment == "Theocracy"){
 //    puts("GovermentPop returns 1");
-    return 1;
+    return 1.5;
 }
+
+if (Goverment == "Fascism"){
+
+   return 0.85;
+}
+
+
 else {
   //  puts("GovermentPop returns 1.5");
-    return 1.5;
+    return 1.0;
 }
 }
 

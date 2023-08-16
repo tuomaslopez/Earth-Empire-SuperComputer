@@ -905,7 +905,7 @@ case(101):
 
 			returnPop32 = Maxpop(0.32, landINT, land , BuildingResidences, residentialTech);		
                         std::cout << "POP with 32% taxe rate " << returnPop32 << std::endl;
-
+			std::cout << "Food comsunption from ppulation = " <<  int(returnPop32*0.03) << std::endl;
                       	PCI32 = PCI( 0.32,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
 			std::cout << "Tax Revenue with 32% tax rate =" << 0.32*PCI32*(returnPop32) << std::endl;
@@ -918,7 +918,7 @@ case(101):
 
 			returnPop33 = Maxpop(0.33, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 33% taxe rate " << returnPop33 << std::endl;
-                        
+                        std::cout << "Food comsunption from ppulation = " <<  int(returnPop33*0.03) << std::endl;
                       	
                       	
                       	
@@ -938,6 +938,8 @@ case(101):
                         
 			returnPop34 = Maxpop(0.34, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 34% taxe rate " << returnPop34 << std::endl;
+			std::cout << "Food comsunption from ppulation = " <<  int(returnPop34*0.03) << std::endl;
+
 
 			PCI34 = PCI( 0.34,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
@@ -950,7 +952,7 @@ case(101):
 
                         returnPop35 =Maxpop(0.35, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 35% taxe rate " << returnPop35 << std::endl;
-
+			std::cout << "Food comsunption from ppulation = " <<  int(returnPop35*0.03) << std::endl;
 			PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
 			std::cout << "Tax Revenue with 35% tax rate =" << 0.35*PCI35*(returnPop35-2) << std::endl;
@@ -975,7 +977,7 @@ case(101):
 
                         returnPop37 = Maxpop(0.37, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 37% taxe rate " << returnPop37 << std::endl;
-
+			std::cout << "Food comsunption from ppulation = " <<  int(returnPop37*0.03) << std::endl;
 
 			PCI37 = PCI( 0.37,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 		
@@ -989,7 +991,7 @@ case(101):
 
                         returnPop38 = Maxpop(0.38, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 38% taxe rate " << returnPop38 << std::endl;
-
+			std::cout << "Food comsunption from ppulation = " <<  int(returnPop38*0.03) << std::endl;
 
 			PCI38 = PCI( 0.38,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 		
@@ -1004,7 +1006,7 @@ case(101):
 
                         returnPop39 = Maxpop(0.39, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 39% taxe rate " << returnPop39 << std::endl;
-
+			std::cout << "Food comsunption from ppulation = " <<  int(returnPop39*0.03) << std::endl;
 			PCI39 = PCI( 0.39,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 		
 
