@@ -228,7 +228,8 @@ int main(int argc, char *argv[])
    double enemyDefenceBonusDouble = 1.00;
    std::string EnemyweaponTechString = "";
    enemyLand = "";
-   
+   std::string enemyAllyGoverment = "";
+   std::string enemyAllyweaponTech = "";
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
@@ -241,7 +242,8 @@ std::cout << "insert command" << std::endl;
 std::cout << "1. own default Adivisor page" << std::endl;
 std::cout << "2. own Military Management page" << std::endl;
 //std::cout << "3: enemy military spy" << std::endl;
-std::cout << "3: enemy spy repots" << std::endl;
+std::cout << "3: enemy spy report" << std::endl;
+std::cout << "4: enemy's ally's spy report from archive (has bugs, developer only use" << std::endl;
 std::cout << "10 manually insert food price for buying/selling food" << std::endl;
 //std::cout << "12 manually insert cash(not used anywhere)" << std::endl;
 std::cout << "100 see max pop with tax rate, use after advisor page " << std::endl;
@@ -766,7 +768,48 @@ case(3):
                         
 			MakeMoney();
 			continue;	
+			
+case(4):                std::cout << " Insert Spy report from archive to as an ally to target" << std::endl;
 
+			temp2 == "2a";
+                        while( temp2 != "The"){
+                        std::cin >> temp2;
+                        }
+                        
+                        temp2 == "2a";
+                        while( temp2 != "The"){
+                        std::cin >> temp2 ;
+
+                        }
+                        
+                        
+                        temp2 == "2a";
+                        while( temp2 != "the"){
+                        std::cin >> temp2 ;
+                        std::cin >> enemyAllyGoverment;;
+                        }
+                        
+                        temp2 == "2a";
+                        while( temp2 != "Weapons"){
+                        std::cin >> temp2 ;
+                        std::cin >> temp2 ;
+                        std::cin >> enemyAllyweaponTech;;
+                        }
+                        
+                        
+                        temp2 == "2a";
+                        while( temp2 != "us"){
+                        std::cin >> temp2 ;
+                        }
+
+                        
+                        
+                        std::cout << " Enemy's Ally's goverment string is = " << enemyAllyGoverment << std::endl;
+                        std::cout << " Enemy's Ally's weaponTech string is = " << enemyAllyweaponTech << std::endl;
+
+
+                        MakeMoney();
+                        continue;
 case(10):
                         std::cout << "Insert food Price, no $ sign" << std::endl;
                         std::cin >> foodPrice;
