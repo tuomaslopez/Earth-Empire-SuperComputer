@@ -64,10 +64,14 @@ int main(int argc, char *argv[])
    std::string weaponTechString;
    std::string tempString;
    int weaponStringSize;
+   int enemyAllyweaponTechSize;
+   
    int EnemyweaponStringSize;
    double weaponDouble;
    double enemyWeaponDouble;
+   double EnemyAllyWeaponDouble;
    int weaponInt;
+   int EnemyAllyweaponInt;
    int enemyWeaponInt;
    std::string TroopsComa;
    std::string EnemyTroopsComa;
@@ -83,6 +87,10 @@ int main(int argc, char *argv[])
    std::string PerCapitaIncomeString;
    std::string readliness;
    std::string enemyLand;
+   std::string EnemyAllyTroopsComa;
+   std::string EnemyAllyTurretsComa;
+   int EnemyAllytroops;
+   int EnemyAllyturrets;
    int businessInt;
    int businessStringSize;
    std::string residentialTechString;
@@ -230,6 +238,9 @@ int main(int argc, char *argv[])
    enemyLand = "";
    std::string enemyAllyGoverment = "";
    std::string enemyAllyweaponTech = "";
+   EnemyAllyTurretsComa = "";
+   std::string EnemyAllyTankscoma = "";
+   int EnemyAllytanks = 0;
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
@@ -745,23 +756,35 @@ case(3):
                         //std::cout << "Enemy Tanks is = " << enemyTanks << std::endl;;
                         
                         //GovermentWeaponsTech(std::string Goverment, int points , int land)
-                        std::cout << "Enemy points in weapons (NOT debugged yet) =" << enemyWeaponInt << std::endl;
-                        std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
-                        std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
-                        std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
-                        std::cout << "Enemy defensive bonus as int =" << enemyDefenceBonusInt << std::endl;
+                        //std::cout << "Enemy points in weapons (NOT debugged yet) =" << enemyWeaponInt << std::endl;
+                        //std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
+                        //std::cout << " Enemy goverment weapons bonus to defence = " << GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ) << std::endl;
+                        //std::cout << "Enemy defensive bonus (at this stage string with percent sign included included = " << EnemyDefensiveBonus << std::endl;
+                        //std::cout << "Enemy defensive bonus as int =" << enemyDefenceBonusInt << std::endl;
                         enemyDefenceBonusDouble += double(enemyDefenceBonusInt)/1000;
-                        std::cout << "Enemy defensive bonus as double =" << enemyDefenceBonusDouble << std::endl;
+                        //std::cout << "Enemy defensive bonus as double =" << enemyDefenceBonusDouble << std::endl;
                         enemyDefenceBonusDouble *=GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ); 
-                        std::cout << "Enemy defensive bonus as double (including technolog)=" << enemyDefenceBonusDouble << std::endl;
+                        //std::cout << "Enemy defensive bonus as double (including technolog)=" << enemyDefenceBonusDouble << std::endl;
                         enemyDefence = enemyDefenceBonusDouble*(1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is = " << enemyDefence << std::endl;
                         
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
+                        std::cout << " Troops needed to break with standard strike= " << 2*(int(1000*JetAttackNeededTobreak)) << std::endl;
+                        std::cout << " 10% more than needed troops needed to break with standard strike= " << 2*(int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
+                        std::cout << " troops neede to break with planned strike= " << 2*int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
+                        std::cout << " 10% troops neede to break with planned strike= " << 2*int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
+                        
                         std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
                         std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
                         std::cout << " Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
                         std::cout << " 10% Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
+                        
+                        
+                        
+                        std::cout << " tanks needed to break with standard strike= " << 0.5*(int(1000*JetAttackNeededTobreak)) << std::endl; 
+                        std::cout << " 10% more than needed tanks needed to break with standard strike= " << 0.5*(int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
+                        std::cout << " tanks neede to break with planned strike= " << 0.5*int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
+                        std::cout << " 10% tanks neede to break with planned strike= " << 0.5*int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
                         
                         //std::cin >> govermentString;
 
@@ -771,33 +794,77 @@ case(3):
 			
 case(4):                std::cout << " Insert Spy report from archive to as an ally to target" << std::endl;
 
-			temp2 == "2a";
+			temp2 = "2a";
                         while( temp2 != "The"){
                         std::cin >> temp2;
                         }
                         
-                        temp2 == "2a";
-                        while( temp2 != "The"){
-                        std::cin >> temp2 ;
+                        //temp2 = "2a";
+                        //while( temp2 != "The"){
+                        //std::cin >> temp2 ;
 
-                        }
+                       // }
                         
                         
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
                         std::cin >> enemyAllyGoverment;;
                         }
                         
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "Weapons"){
+
                         std::cin >> temp2 ;
-                        std::cin >> temp2 ;
-                        std::cin >> enemyAllyweaponTech;;
                         }
+                        std::cin >> temp2 ;
+                        std::cin >> enemyAllyweaponTech;
                         
                         
-                        temp2 == "2a";
+                        enemyAllyweaponTechSize = enemyAllyweaponTech.size();
+                        enemyAllyweaponTechSize--;
+                        enemyAllyweaponTech.erase(enemyAllyweaponTechSize);
+                        EnemyAllyweaponInt = strToint(enemyAllyweaponTech);
+                        EnemyAllyWeaponDouble = EnemyAllyweaponInt;
+                            EnemyAllyWeaponDouble = EnemyAllyWeaponDouble/1000;
+                        
+                        
+                        
+                        
+                        
+                        while( temp2 != "Troops"){
+                        std::cin >> temp2;
+                        }
+                        std::cin >> EnemyAllyTroopsComa;
+                        EnemyAllytroops = strToint(EnemyAllyTroopsComa);
+                        temp2 = "!!!";
+
+
+                        temp2 = "!!!";
+                        while (temp2 != "Turrets"){
+                        std::cin >> temp2;
+                        }
+                        std::cin >> EnemyAllyTurretsComa;
+                        EnemyAllyturrets = strToint(EnemyAllyTurretsComa);
+                        temp2 = "!!!";
+                        
+                        
+                        while( temp2 != "Tanks"){
+                        std::cin >> temp2 ;
+                        }
+                        std::cin >>  EnemyAllyTankscoma;
+                        EnemyAllytanks = strToint(EnemyAllyTankscoma);
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        temp2 = "2a";
                         while( temp2 != "us"){
                         std::cin >> temp2 ;
                         }
@@ -805,8 +872,11 @@ case(4):                std::cout << " Insert Spy report from archive to as an a
                         
                         
                         std::cout << " Enemy's Ally's goverment string is = " << enemyAllyGoverment << std::endl;
-                        std::cout << " Enemy's Ally's weaponTech string is = " << enemyAllyweaponTech << std::endl;
-
+                        std::cout << " Enemy's Ally's weaponTech as bouble is = " << EnemyAllyWeaponDouble << std::endl;
+			std::cout << " Enemy's Ally's troops as int is = " << EnemyAllytroops << std::endl;
+			std::cout << " Enemy's Ally's turrets as int is = " << EnemyAllyturrets << std::endl;
+			std::cout << " Enemy's Ally's tanks as int is = " << EnemyAllytanks << std::endl;
+			std::cout << " This is uncer consuction developer only" << std::endl;
 
                         MakeMoney();
                         continue;

@@ -48,7 +48,7 @@ else {
 
 double GovermentIndustry(std::string Goverment)
 {
-std::cout << "Goveverment = " << Goverment << std::endl;
+//std::cout << "Goveverment = " << Goverment << std::endl;
 	if (Goverment != "Communisim"){
 	    //puts("GovermentPop returns 1");
 	    return 1.35;
@@ -63,12 +63,12 @@ std::cout << "Goveverment = " << Goverment << std::endl;
 
 double GovermentFarming(std::string Goverment){
 
-std::cout << "Goveverment = " << Goverment << std::endl;
+//std::cout << "Goveverment = " << Goverment << std::endl;
 if (Goverment == "Fascism"){
 	    //puts("GovermentFarming returns 1.15");
 	    return 1.15;
 	}
-puts("GovermentFarming returns 1.0");
+//puts("GovermentFarming returns 1.0");
 return 1.0;
 }
 
@@ -79,7 +79,7 @@ if (Goverment == "Fascism"){
 	    //puts("GovermentOil returns 1.75");
 	    return 1.75;
 	}
-puts("GovermentOil returns 1.0");
+//puts("GovermentOil returns 1.0");
 return 1.0;
 }
 
@@ -88,7 +88,7 @@ return 1.0;
 double Govermentspy(std::string Goverment){
     std::cout << "Goveverment = " << Goverment << std::endl;
     if (Goverment != "Dictatorship"){
-        puts("Govermentspy returns 1");
+//        puts("Govermentspy returns 1");
         return 1;
     }
     else {
@@ -98,7 +98,7 @@ double Govermentspy(std::string Goverment){
 }
 
 double GovermentWeaponsTech(std::string Goverment, int points , int land){
-	std::cout << "GovermentWeaponsTech, Goverment = " << Goverment << " points in weapons = " << points << " land is = " << land << std::endl;
+	//std::cout << "GovermentWeaponsTech, Goverment = " << Goverment << " points in weapons = " << points << " land is = " << land << std::endl;
 	double GvtTech = 1.0;
 	double GvtEff  = 1.0;
 	double MaxTech = 1.5;
@@ -113,7 +113,7 @@ double GovermentWeaponsTech(std::string Goverment, int points , int land){
 	MaxTech = 1.325;
 	
 	}
-    std::cout << " inside GovermentWeaponsTech " << std::endl;
+   // std::cout << " inside GovermentWeaponsTech " << std::endl;
 	if (Goverment == "Democracy"){        
 	    GvtTech = 1.1;
 	}
