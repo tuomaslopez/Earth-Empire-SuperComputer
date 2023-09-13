@@ -325,12 +325,12 @@ case(2):
 
 
 case(1):
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
                         }
 
-                        temp2 == "2a";
+                        temp2 = "2a";
 
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
@@ -592,7 +592,7 @@ case(1):
                         
 case(2):
                         std::cout << "Insert own military management" << std::endl;
-                        temp2 == "2a";
+                        temp2 = "2a";
                         HasUserInputtedOwnMilitaryManagementPage = true;
                         while( temp2 != "Readiness:"){
                         std::cin >> temp2 ;
@@ -600,7 +600,7 @@ case(2):
                         std:: cin >>readliness;
                         
                      
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "us"){
                         std::cin >> temp2 ;
                         }                        
@@ -662,18 +662,18 @@ case(2):
 case(3):
 			std::cout << "Insert spy report" << std::endl;
 			
-			temp2 == "2a";
+			temp2 = "2a";
                         while( temp2 != "The"){
                         std::cin >> temp2;
                         }
                         
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "The"){
                         std::cin >> temp2 ;
 
                         }
                         
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
                         std::cin >> enemyGoverment;;
@@ -735,12 +735,12 @@ case(3):
                         
                         
                         
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "About"){
                         std::cin >> temp2 ;
                         }
                         
-                        temp2 == "2a";
+                        temp2 = "2a";
                         while( temp2 != "us"){
                         std::cin >> temp2 ;
                         }
