@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     //QCoreApplication a(argc, argv);
    int troopint = 0;
    
-   int turretsint = 0;
+   //int turretsint = 0;
    int tanksint = 0;
    double industryGovermentBonus = 1.00;
    //static int money;
@@ -66,9 +66,9 @@ int main(int argc, char *argv[])
    int weaponStringSize;
    int enemyAllyweaponTechSize;
    
-   int EnemyweaponStringSize;
+//   int EnemyweaponStringSize;
    double weaponDouble;
-   double enemyWeaponDouble;
+  // double enemyWeaponDouble;
    double EnemyAllyWeaponDouble;
    int weaponInt;
    int EnemyAllyweaponInt;
@@ -117,10 +117,9 @@ int main(int argc, char *argv[])
    double returnPop18 = 0;
    double returnPop19 = 0;
    double returnPop20 = 0;
-   double returnPop21 = 0;
+   //double returnPop21 = 0;
    double returnPop22 = 0;
-   double returnPop23 = 0;
-   double returnPop24 = 0;
+  // double returnPop23 = 0;
    double returnPop25 = 0;
    double returnPop26 = 0;
    double returnPop27 = 0;
@@ -152,21 +151,21 @@ int main(int argc, char *argv[])
    double returnPop53 = 0;
    double returnPop54 = 0;
    double returnPop55 = 0;
-   double returnPop56 = 0;
-   double returnPop57 = 0;
-   double returnPop58 = 0;
-   double returnPop59 = 0;
-   double returnPop60 = 0;
-   double returnPop61 = 0;
-   double returnPop62 = 0;
-   double returnPop63 = 0;
-   double returnPop64 = 0;
-   double returnPop65 = 0;
-   double returnPop66 = 0;
-   double returnPop67 = 0;
-   double returnPop68 = 0;
-   double returnPop69 = 0;
-   double returnPop70 = 0;
+   //double returnPop56 = 0;
+   //double returnPop57 = 0;
+   //double returnPop58 = 0;
+   //double returnPop59 = 0;
+   //double returnPop60 = 0;
+   //double returnPop61 = 0;
+   //double returnPop62 = 0;
+   //double returnPop63 = 0;
+   //double returnPop64 = 0;
+   //double returnPop65 = 0;
+   //double returnPop66 = 0;
+   //double returnPop67 = 0;
+   //double returnPop68 = 0;
+   //double returnPop69 = 0;
+   //double returnPop70 = 0;
    
    
    double PCI32 = 0;   
@@ -199,7 +198,7 @@ int main(int argc, char *argv[])
    int GDPpopint = 0;
    char usingCashing  = 'N';
    double cashningBonus = 1.0;
-   int PerCapita = 0;
+   //int PerCapita = 0;
    double BuildingIndustrialComplexesDouble = 0;
    int priceTroops = 0;
    int priceJets = 0;
@@ -769,10 +768,10 @@ case(3):
                         std::cout << "Enemy defence is = " << enemyDefence << std::endl;
                         
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
-                        std::cout << " Troops needed to break with standard strike= " << 2*(int(1000*JetAttackNeededTobreak)) << std::endl;
-                        std::cout << " 10% more than needed troops needed to break with standard strike= " << 2*(int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
-                        std::cout << " troops neede to break with planned strike= " << 2*int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
-                        std::cout << " 10% troops neede to break with planned strike= " << 2*int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
+                        std::cout << " Troops needed to break with standard strike= " << int(2*(int(1000*JetAttackNeededTobreak))) << std::endl;
+                        std::cout << " 10% more than needed troops needed to break with standard strike= " << int(2*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
+                        std::cout << " troops neede to break with planned strike= " << int(2*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
+                        std::cout << " 10% troops neede to break with planned strike= " << int(2*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
                         
                         std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
                         std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
@@ -781,10 +780,10 @@ case(3):
                         
                         
                         
-                        std::cout << " tanks needed to break with standard strike= " << 0.5*(int(1000*JetAttackNeededTobreak)) << std::endl; 
-                        std::cout << " 10% more than needed tanks needed to break with standard strike= " << 0.5*(int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
-                        std::cout << " tanks neede to break with planned strike= " << 0.5*int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
-                        std::cout << " 10% tanks neede to break with planned strike= " << 0.5*int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
+                        std::cout << " tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak))) << std::endl; 
+                        std::cout << " 10% more than needed tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
+                        std::cout << " tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
+                        std::cout << " 10% tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
                         
                         //std::cin >> govermentString;
 
@@ -1202,7 +1201,7 @@ case(101):
  case(103):
                         troopint = 0;
                         jetsint = 0;
-                        turretsint = 0;
+                        //turretsint = 0;
                         tanksint = 0;
 
                         std::cout << "Industrial complexes=" << BuildingIndustrialComplexes << std::endl;
