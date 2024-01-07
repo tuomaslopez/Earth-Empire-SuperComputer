@@ -774,8 +774,23 @@ case(3):
                         std::cout << " 10% troops neede to break with planned strike= " << int(2*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
                         
                         std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
-                        std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
-                        std::cout << " Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
+	                puts("This has been player tested");
+			puts("This has been player tested");
+                        puts("This has been player tested");
+			puts("This has been player tested");	
+			puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
+                        puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			puts("This has been player tested");
+			std::cout << " Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
                         std::cout << " 10% Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
                         
                         
