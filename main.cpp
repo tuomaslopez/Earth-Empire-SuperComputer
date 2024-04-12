@@ -260,8 +260,8 @@ std::cout << "10 manually insert food price for buying/selling food" << std::end
 //std::cout << "12 manually insert cash(not used anywhere)" << std::endl;
 std::cout << "100 see max pop with tax rate, use after advisor page " << std::endl;
 std::cout << "101 to see revenue with a tax rate, use after advisor page" << std::endl;
-std::cout << "102 to manually add prices for troops,turrets and tanks " << std::endl;
-std::cout << "103 see how many Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
+std::cout << "102 to manually add prices for Spies,troops,turrets and tanks " << std::endl;
+std::cout << "103 see how many Spies/Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
 std::cout << "104 to see farm production and profit for selling food " << std::endl;
 std::cout << "500 tool, to find mex profit with tax rate while cashing" << std::endl;
 std::cout << "999 to exit" << std::endl;
