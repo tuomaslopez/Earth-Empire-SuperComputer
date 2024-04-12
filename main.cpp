@@ -1235,7 +1235,7 @@ case(101):
 
                         //int trooprevenue = troopint*priceTroops;
                         //int jetsrevenue = troopint*priceJets;
-	 		std::cout << "Spies per turn "  << 0.333*troopint << " Profit from spies per turn= "  << 0.333*troopint*priceSpies << std::endl;
+	 		std::cout << "Spies per turn "  << int(0.333*troopint) << " Profit from spies per turn= "  << int(0.333*troopint*priceSpies) << std::endl;
                         std::cout << "Troops per turn " << troopint << " Profit from troops per turn= " << troopint*priceTroops << std::endl;
                         std::cout << "Jets per turn " << troopint << " Profit from jets per turn= " << troopint*priceJets << std::endl;
                         std::cout << "Turrets per turn " << troopint << " Profit from turrets per turn= " << troopint*priceTurrets << std::endl;
