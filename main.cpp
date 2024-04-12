@@ -200,7 +200,9 @@ int main(int argc, char *argv[])
    double cashningBonus = 1.0;
    //int PerCapita = 0;
    double BuildingIndustrialComplexesDouble = 0;
+   int priceSpies = 0;
    int priceTroops = 0;
+	
    int priceJets = 0;
    int priceTanks = 0;
    int priceTurrets = 0;
@@ -1233,6 +1235,7 @@ case(101):
 
                         //int trooprevenue = troopint*priceTroops;
                         //int jetsrevenue = troopint*priceJets;
+	 		std::cout << "Spies per turn "  << troopint << " Profit from spies per turn= "  << troopint*priceSpies << std::endl;
                         std::cout << "Troops per turn " << troopint << " Profit from troops per turn= " << troopint*priceTroops << std::endl;
                         std::cout << "Jets per turn " << troopint << " Profit from jets per turn= " << troopint*priceJets << std::endl;
                         std::cout << "Turrets per turn " << troopint << " Profit from turrets per turn= " << troopint*priceTurrets << std::endl;
@@ -1267,7 +1270,8 @@ case(102):
                      //int priceJets = 0;
                      //int priceTanks = 0;
                      //int priceTurrets = 0;
-    std::cout << " Troops price, Jets price, price Turrets , price Tanks" << std::endl;
+    std::cout << " Spies price, Troops price, Jets price, price Turrets , price Tanks" << std::endl;
+    std::cin >> priceSpies ;
     std::cin >> priceTroops ;
     std::cin >> priceJets;
     std::cin >> priceTurrets;
