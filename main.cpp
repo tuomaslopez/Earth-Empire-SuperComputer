@@ -798,8 +798,19 @@ case(3):
                         
                         
                         std::cout << " tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak))) << std::endl; 
-                        std::cout << " 10% more than needed tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
-                        std::cout << " tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
+                        
+			puts("This has not yet been  been player tested");
+                        puts("This has not yet been  been player tested");
+                        puts("This has not yet been  been player tested");
+                        puts("This has not yet been  been player tested");
+			std::cout << " 10% more than needed tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
+                        puts("This has not yet been  been player tested");
+                        puts("This has not yet been  been player tested");
+                        puts("This has not yet been  been player tested");
+                        puts("This has not yet been  been player tested");
+	
+			
+			std::cout << " tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
                         std::cout << " 10% tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
                         
                         //std::cin >> govermentString;
