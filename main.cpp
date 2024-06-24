@@ -16,8 +16,8 @@
 #include "goverments.h"
 #include "food.h"
 #include "pci.h"
-int main(int argc, char *argv[])
-{
+#include <tgmath.h> 
+int main(int argc, char *argv[]){
     //QCoreApplication a(argc, argv);
    int troopint = 0;
    
@@ -189,7 +189,7 @@ int main(int argc, char *argv[])
    
    
    
-   
+   int LabsInt = 0;
    int enemyLandint = 1;
    int landINT = 0;
    double revenue = 0;
@@ -218,6 +218,7 @@ int main(int argc, char *argv[])
    int SpyTechInt = 1;
    double spyTechDouble = 1.00;
    int Farmint = 0;
+   std::string  LabsString ="";
    std::string agriculturalTechString = "";
    int agriculturalStringSize = 0;
    int agriculturalInt = 0;
@@ -242,12 +243,15 @@ int main(int argc, char *argv[])
    EnemyAllyTurretsComa = "";
    std::string EnemyAllyTankscoma = "";
    int EnemyAllytanks = 0;
+   std::string turnsString = ""; 
+   
+   
 //QProcess *process = new QProcess();
 //QString program;
 //profitProgram2 worked without www
 
 //program = "firefox http://www.wolframalpha.com/input/?i=max";
- while(1){
+while(1){
 std::cout << "insert command" << std::endl;
 //std::cout << "1: own military page" << std::endl;
 //std::cout << "2: own reserch page" << std::endl;
@@ -263,6 +267,7 @@ std::cout << "101 to see revenue with a tax rate, use after advisor page" << std
 std::cout << "102 to manually add prices for Spies,troops,turrets and tanks " << std::endl;
 std::cout << "103 see how many Spies/Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
 std::cout << "104 to see farm production and profit for selling food " << std::endl;
+std::cout << "105 to see tech production and profit for selling tech " << std::endl;
 std::cout << "500 tool, to find mex profit with tax rate while cashing" << std::endl;
 std::cout << "999 to exit" << std::endl;
 
@@ -326,7 +331,7 @@ case(2):
 */
 
 
-case(1):
+case(1):{
                         temp2 = "2a";
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
@@ -343,6 +348,10 @@ case(1):
                         if (govermentString == "Communism"){
 			    
                             industryGovermentBonus = GovermentIndustry("Communism");
+                        }
+                        while (temp2 != "Left"){
+                        std::cin >> temp2 ;
+                        std::cin >> turnsString;
                         }
                         
                         while (temp2 != "Networth"){
@@ -368,6 +377,14 @@ case(1):
                         std::cin >> temp2 ;
                         }
                         std::cin >> BuildingIndustrialComplexes;
+                        
+                        
+                        while( temp2 != "Labs"){
+                        
+                        std::cin >> temp2;
+                        }
+                        std::cin >> LabsString;
+                        LabsInt = strToint(LabsString);
                         
                         
                         
@@ -502,9 +519,6 @@ case(1):
                         GDPpopdouble = (GDPpopint/100.0);
                        //	std::cout << "Line 283, GDPpodouble = " << GDPpopdouble << std::endl; 	
                        //  while( temp2 != "Income")
-//
-  //                      
-    //                    }
 
                         
 
@@ -572,6 +586,10 @@ case(1):
                         attack = 2*jets+troops+4*tanks;
                         attack *= weaponDouble;
                         attack *= Govermentmilitary(govermentString);
+                        
+                        
+                        std::cout << "Labs(String)=" << LabsString << std::endl;
+                        std::cout << "Labs(Int)= " << LabsInt << std::endl;
                         //std::cout << "Attack streght  " << attack << std::endl;
                         
                         //std::cout << "Networth String  is " << NetworthString << std::endl;
@@ -589,10 +607,9 @@ case(1):
 
                         //QDesktopServices::openUrl(QUrl(""));
                         MakeMoney();
-                        continue;
-                        
-                        
-case(2):
+                        continue;                        
+}                       
+case(2):{
                         std::cout << "Insert own military management" << std::endl;
                         temp2 = "2a";
                         HasUserInputtedOwnMilitaryManagementPage = true;
@@ -616,7 +633,7 @@ case(2):
                         MakeMoney();
                         continue;
                         
-                       
+}     
 //case(3):
 //                            std::cout << "Type enemy goverment name" << std::endl;
 //                            std::cout << "Insert Dictatorship/Theocracy/Communisim/Fascism, type break, to return to main menu" << std::endl;
@@ -661,7 +678,7 @@ case(2):
 
 //
 
-case(3):
+case(3):{
 			std::cout << "Insert spy report" << std::endl;
 			
 			temp2 = "2a";
@@ -798,19 +815,16 @@ case(3):
                         
                         
                         std::cout << " tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak))) << std::endl; 
-                        
-			puts("This has not yet been  been player tested");
+                        			puts("This has not yet been  been player tested");
                         puts("This has not yet been  been player tested");
                         puts("This has not yet been  been player tested");
                         puts("This has not yet been  been player tested");
-			std::cout << " 10% more than needed tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
+                        std::cout << " 10% more than needed tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
+                        			puts("This has not yet been  been player tested");
                         puts("This has not yet been  been player tested");
                         puts("This has not yet been  been player tested");
                         puts("This has not yet been  been player tested");
-                        puts("This has not yet been  been player tested");
-	
-			
-			std::cout << " tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
+                        std::cout << " tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
                         std::cout << " 10% tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
                         
                         //std::cin >> govermentString;
@@ -818,8 +832,9 @@ case(3):
                         
 			MakeMoney();
 			continue;	
-			
-case(4):                std::cout << " Insert Spy report from archive to as an ally to target" << std::endl;
+}			
+case(4):              { 
+ 			std::cout << " Insert Spy report from archive to as an ally to target" << std::endl;
 
 			temp2 = "2a";
                         while( temp2 != "The"){
@@ -907,18 +922,19 @@ case(4):                std::cout << " Insert Spy report from archive to as an a
 
                         MakeMoney();
                         continue;
-case(10):
+}
+case(10):{
                         std::cout << "Insert food Price, no $ sign" << std::endl;
                         std::cin >> foodPrice;
                         MakeMoney();
                         continue;
-
-case(100):
+}
+case(100):{
                         maxpopINT = Maxpop(taxDouble, landINT, land , BuildingResidences, residentialTech);
                         MakeMoney();
                         continue;
-
-case(101):
+}
+case(101):{
                         std::cout << "TAX, eg 0.33" << std::endl ;
                         std::cin >> taxDouble ;
                         landINT =strToint(land);
@@ -961,8 +977,8 @@ case(101):
                        
                         MakeMoney();
                         continue;
-                        
- case(500):             
+}                     
+ case(500): {    
 			puts("At this moment tells maximum pop with tax rate Line 749 in source");                       
                         returnPop1 = Maxpop(0.01, landINT, land , BuildingResidences, residentialTech); 
                         std::cout << "POP with 1% taxe rate " << returnPop1 << std::endl;
@@ -1226,7 +1242,8 @@ case(101):
 
                         MakeMoney();
                         continue;
- case(103):
+}
+ case(103):{
                         troopint = 0;
                         jetsint = 0;
                         //turretsint = 0;
@@ -1255,7 +1272,8 @@ case(101):
 			
 			MakeMoney();	
                         continue;
-case(104):		
+}
+case(104):{		
 
 			std::cout << "Farming complexes="  << farms << std::endl;
 			Farmint = strToint(farms);
@@ -1266,17 +1284,29 @@ case(104):
 			MakeMoney();
 			continue;
 
-case(200):
+}
+case(105):{	
+
+			std::cout << "Labs="  << LabsInt << std::endl;
+			std::cout << "land=" << land << std::endl;
+			std::cout <<" Tech per turn =" << round(0.17*LabsInt*(1+LabsInt/strToint(land))+3.0) << std::endl;
+			MakeMoney();
+			continue;
+}
+
+
+
+case(200):{
                         std::cout << militaryExpencesmoney(troops,jets, turrets , tanks ,spies , Networthint  );
                         MakeMoney();
                         continue;
+}
 
-
-case(999):
+case(999):{
                       MakeMoney();
                       exit(0);
-
-case(102):
+}
+case(102):{
                      //int priceTroops = 0;
                      //int priceJets = 0;
                      //int priceTanks = 0;
@@ -1297,9 +1327,7 @@ case(102):
     std::cout << troops << std::endl;
     */
     //attack = (2*jets+4*tanks+troops);
-    //while(1){
 
-    //}
 
     /*
     std::cout << "Attack" << std::endl;
@@ -1307,4 +1335,6 @@ case(102):
     */
      return 0;
 }
-}
+
+
+
