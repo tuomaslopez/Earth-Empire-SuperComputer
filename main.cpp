@@ -16,6 +16,7 @@
 #include "goverments.h"
 #include "food.h"
 #include "pci.h"
+#include "intTechPerTurnintLabs.h"
 #include <math.h>
 int main(int argc, char *argv[])
 {
@@ -39,6 +40,18 @@ int main(int argc, char *argv[])
    double tanksdouble = 0;
 
    int tanks;
+   
+  int MilitaryTechPrize = 0;
+  int MedicalTechPrize = 0;
+  int BusinessTechPrize = 0;
+  int ResidentialTechPrize = 0;
+  int AgriculturalTechPrize = 0;
+  int WarfareTechPrize = 0;
+  int MilitaryStrategyTechPrize = 0; 	
+  int WeaponsTechPrice = 0;
+  int IndustrialTechPrice = 0;
+  int SpyTechPrize = 0;
+  int SDITechPrize = 0; 
 
    double attack;
 
@@ -258,6 +271,7 @@ std::cout << "2. own Military Management page" << std::endl;
 std::cout << "3: enemy spy report" << std::endl;
 std::cout << "4: enemy's ally's spy report from archive (has bugs, developer only use" << std::endl;
 std::cout << "10 manually insert food price for buying/selling food" << std::endl;
+std::cout << "11 manually insert food price for buying/selling tech" << std::endl;
 //std::cout << "12 manually insert cash(not used anywhere)" << std::endl;
 std::cout << "100 see max pop with tax rate, use after advisor page " << std::endl;
 std::cout << "101 to see revenue with a tax rate, use after advisor page" << std::endl;
@@ -265,7 +279,7 @@ std::cout << "102 to manually add prices for Spies,troops,turrets and tanks " <<
 std::cout << "103 see how many Spies/Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
 std::cout << "104 to see farm production and profit for selling food " << std::endl;
 std::cout << "105 to see science production" << std::endl;
-std::cout << "500 tool, to find mex profit with tax rate while cashing" << std::endl;
+std::cout << "500 tool, to find max profit with tax rate while cashing" << std::endl;
 std::cout << "999 to exit" << std::endl;
 
 
@@ -926,6 +940,24 @@ case(10):
                         MakeMoney();
                         continue;
 
+case(11):
+                        std::cout << "Insert tech prices no $ sign" << std::endl;
+                        std::cin >> MilitaryTechPrize;
+                        std::cin >> MedicalTechPrize;
+                        std::cin >> BusinessTechPrize;
+                        std::cin >> ResidentialTechPrize;
+                        std::cin >> AgriculturalTechPrize;
+                        std::cin >> WarfareTechPrize;
+                        std::cin >> MilitaryStrategyTechPrize; 	
+                        std::cin >> WeaponsTechPrice;
+                        std::cin >> IndustrialTechPrice;
+                        std::cin >> SpyTechPrize;
+                        std::cin >> SDITechPrize;
+                        MakeMoney();
+                        continue;
+
+
+
 case(100):
                         maxpopINT = Maxpop(taxDouble, landINT, land , BuildingResidences, residentialTech);
                         MakeMoney();
@@ -1283,7 +1315,30 @@ case(105):
 
 			std::cout << "Science labs="  << BuildingLabs << std::endl;
 			std::cout << "Land=" <<  land << std::endl;
-			std::cout << " Can research this many points of science per turn = " << round((0.17*double(BuildingLabs))/(1.0+double(BuildingLabs)/double(strToint(land)))+3.0)  << std::endl;
+			
+			std::cout << "Tech per turn = " << TechPerTurn(BuildingLabs, strToint(land)) << std::endl;
+			
+			
+			std::cout << "money from selling military tech per turn =" << (MilitaryTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+			
+			std::cout << "money from selling medical tech per turn ="  << (MedicalTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+			std::cout << "money from selling business tech per turn =" << (BusinessTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+                        std::cout << "money from selling residental tech per turn =" << (ResidentialTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;			
+
+                     std::cout << "money from selling Agricultural tech per turn =" << (AgriculturalTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;			
+                      std::cout << "money from selling Wartfarte tech per turn =" << (WarfareTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;	
+                      
+                        std::cout << "money from selling miliatry tech strategy tech per turn =" << (MilitaryStrategyTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
+                      
+                      
+                    std::cout << "money from selling weapon tech strategy tech per turn =" << (WeaponsTechPrice*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
+
+                std::cout << "money from selling industrial tech per turn =" << (IndustrialTechPrice*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
+               std::cout << "money from selling spy tech per turn =" << (SpyTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
+
+			std::cout << "money from selling SDI tech per turn =" << (SDITechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
+			
+			
 			MakeMoney();
 			continue;
 
