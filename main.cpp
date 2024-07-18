@@ -16,6 +16,7 @@
 #include "goverments.h"
 #include "food.h"
 #include "pci.h"
+#include <math.h>
 int main(int argc, char *argv[])
 {
     //QCoreApplication a(argc, argv);
@@ -189,7 +190,7 @@ int main(int argc, char *argv[])
    
    
    
-   
+   int BuildingLabs = 0;
    int enemyLandint = 1;
    int landINT = 0;
    double revenue = 0;
@@ -263,6 +264,7 @@ std::cout << "101 to see revenue with a tax rate, use after advisor page" << std
 std::cout << "102 to manually add prices for Spies,troops,turrets and tanks " << std::endl;
 std::cout << "103 see how many Spies/Troops/Jets/Turrets/Tanks/Spies your country can produce" << std::endl;
 std::cout << "104 to see farm production and profit for selling food " << std::endl;
+std::cout << "105 to see science production" << std::endl;
 std::cout << "500 tool, to find mex profit with tax rate while cashing" << std::endl;
 std::cout << "999 to exit" << std::endl;
 
@@ -368,6 +370,13 @@ case(1):
                         std::cin >> temp2 ;
                         }
                         std::cin >> BuildingIndustrialComplexes;
+                        
+                        
+                        while( temp2 != "Labs"){
+                        std::cin >> temp2 ;
+                        }
+                        std::cin >> temp2;
+                        BuildingLabs = strToint(temp2);
                         
                         
                         
@@ -572,7 +581,8 @@ case(1):
                         attack = 2*jets+troops+4*tanks;
                         attack *= weaponDouble;
                         attack *= Govermentmilitary(govermentString);
-                        //std::cout << "Attack streght  " << attack << std::endl;
+                        std::cout << " Science labs = "<< BuildingLabs << std::endl;
+                         //std::cout << "Attack streght  " << attack << std::endl;
                         
                         //std::cout << "Networth String  is " << NetworthString << std::endl;
                         //std::cout << "Networth is " << Networthint << std::endl;
@@ -1268,6 +1278,15 @@ case(104):
 			std::cout << " Money for selling food on the market per turn =" << FarmProduction*foodPrice << std::endl;
 			MakeMoney();
 			continue;
+
+case(105):		
+
+			std::cout << "Science labs="  << BuildingLabs << std::endl;
+			std::cout << "Land=" <<  land << std::endl;
+			std::cout << " Can research this many points of science per turn = " << round((0.17*double(BuildingLabs))/(1.0+double(BuildingLabs)/double(strToint(land)))+3.0)  << std::endl;
+			MakeMoney();
+			continue;
+
 
 case(200):
                         std::cout << militaryExpencesmoney(troops,jets, turrets , tanks ,spies , Networthint  );
