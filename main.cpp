@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
   int IndustrialTechPrice = 0;
   int SpyTechPrize = 0;
   int SDITechPrize = 0; 
-
+  std::string Turns = "";
    double attack;
 
    bool HasUserInputtedOwnMilitaryManagementPage = false;  
@@ -221,7 +221,7 @@ int main(int argc, char *argv[])
    int priceTanks = 0;
    int priceTurrets = 0;
    int jetsint = 0;
-   double industrialTech = 1.00;
+   //double industrialTech = 1.00;
    double agrciculturaTech = 1.00;
    std::string IndustrialTechString = "";
    int industrialInt = 1;
@@ -240,7 +240,7 @@ int main(int argc, char *argv[])
    std::string oilRigsString = "";   
    std::string enemyGoverment;
    double enemyDefence;
-   double enemyGovermnetMilitaryBonus = 1.00;
+   //double enemyGovermnetMilitaryBonus = 1.00;
    unsigned int command;
    double BuildingResidences; // oli double
    double BuildingIndustrialComplexes;
@@ -271,7 +271,7 @@ std::cout << "2. own Military Management page" << std::endl;
 std::cout << "3: enemy spy report" << std::endl;
 std::cout << "4: enemy's ally's spy report from archive (has bugs, developer only use" << std::endl;
 std::cout << "10 manually insert food price for buying/selling food" << std::endl;
-std::cout << "11 manually insert food price for buying/selling tech" << std::endl;
+std::cout << "11 manually insert point price for selling tech" << std::endl;
 //std::cout << "12 manually insert cash(not used anywhere)" << std::endl;
 std::cout << "100 see max pop with tax rate, use after advisor page " << std::endl;
 std::cout << "101 to see revenue with a tax rate, use after advisor page" << std::endl;
@@ -344,6 +344,12 @@ case(2):
 
 case(1):
                         temp2 = "2a";
+                        while (temp2 != "Turns:"){
+                        std::cin >> temp2;
+                        }
+                        
+                        std::cin >> Turns;
+                        
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
                         }
@@ -596,6 +602,8 @@ case(1):
                         attack *= weaponDouble;
                         attack *= Govermentmilitary(govermentString);
                         std::cout << " Science labs = "<< BuildingLabs << std::endl;
+                        std::cout << " Turns = " << strToint(Turns) << std::endl;
+                        
                          //std::cout << "Attack streght  " << attack << std::endl;
                         
                         //std::cout << "Networth String  is " << NetworthString << std::endl;
@@ -1317,7 +1325,7 @@ case(105):
 			std::cout << "Land=" <<  land << std::endl;
 			
 			std::cout << "Tech per turn = " << TechPerTurn(BuildingLabs, strToint(land)) << std::endl;
-			
+			std::cout << "Turns= " << strToint(Turns) << std::endl;
 			
 			std::cout << "money from selling military tech per turn =" << (MilitaryTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
 			
