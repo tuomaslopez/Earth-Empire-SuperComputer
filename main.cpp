@@ -601,8 +601,8 @@ case(1):
                         attack = 2*jets+troops+4*tanks;
                         attack *= weaponDouble;
                         attack *= Govermentmilitary(govermentString);
-                        std::cout << " Science labs = "<< BuildingLabs << std::endl;
-                        std::cout << " Turns = " << strToint(Turns) << std::endl;
+                        //std::cout << " Science labs = "<< BuildingLabs << std::endl;
+                        //std::cout << " Turns = " << strToint(Turns) << std::endl;
                         
                          //std::cout << "Attack streght  " << attack << std::endl;
                         
@@ -938,7 +938,7 @@ case(4):                std::cout << " Insert Spy report from archive to as an a
 			std::cout << " Enemy's Ally's troops as int is = " << EnemyAllytroops << std::endl;
 			std::cout << " Enemy's Ally's turrets as int is = " << EnemyAllyturrets << std::endl;
 			std::cout << " Enemy's Ally's tanks as int is = " << EnemyAllytanks << std::endl;
-			std::cout << " This is uncer consuction developer only" << std::endl;
+			std::cout << " This is under construction developer only" << std::endl;
 
                         MakeMoney();
                         continue;
@@ -1285,9 +1285,9 @@ case(101):
                         //turretsint = 0;
                         tanksint = 0;
 
-                        std::cout << "Industrial complexes=" << BuildingIndustrialComplexes << std::endl;
-                        std::cout << "Industrial tech=" << industrialDouble << std::endl;
-                        std::cout << "Goverment Industrial tech bonus=" << industryGovermentBonus << std::endl; 
+                        //std::cout << "Industrial complexes=" << BuildingIndustrialComplexes << std::endl;
+                        //std::cout << "Industrial tech=" << industrialDouble << std::endl;
+                        //std::cout << "Goverment Industrial tech bonus=" << industryGovermentBonus << std::endl; 
                         
                         BuildingIndustrialComplexesDouble = BuildingIndustrialComplexes;
                         troopdouble = (BuildingIndustrialComplexesDouble*industryGovermentBonus*industrialDouble);
