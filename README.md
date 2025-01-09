@@ -5,3 +5,4 @@ Earth Empires simulator, is also useful industrialist. Choose 1 and attach your 
 On android/Iphone there is opionapp, toluna, Rewardly, M3 panel, Poll Pay where you can get Paypal money through surveys.
 Open desktop/tablets there is surveytime (this one is very useful you get paid 0.5 dollars from one survey instantly. So if everyone would do one surveytime survey a month and donate that, I could live with that.
 https://paypal.me/earthsupercomputer
+You can also send me Solana crypto to address 7hENmxbP2khsYS14akKF8xnPCdLmgv5Y3Etf6idA6XCh
