@@ -12,8 +12,8 @@ static int moneyRun = 0;   //0 for popup, 1 for no popups
 int MakeMoney(){
     if( moneyRun == 0){
     puts("<Message from creator of Earth Empire Super Computer>");
-    puts("On android/Iphone there is opionapp, toluna, Rewardly, M3 panel, Poll Pay where you can get Paypal money through surveys. Open desktop/tablets there is surveytime (this one is very useful you get paid 0.5 dollars from one survey instantly. So if everyone would do one surveytime survey a month and donate that, I could live with that. https://paypal.me/earthsupercomputer");
-    
+    puts("On Android/Iphone there is opionapp, toluna, Rewardly, M3 panel, Poll Pay where you can get Paypal money through surveys. Open desktop/tablets there is surveytime (this one is very useful you get paid 0.5 dollars from one survey instantly. So if everyone would do one surveytime survey a month and donate that, I could live with that. https://paypal.me/earthsupercomputer");
+    puts("you can also send me Solana crypto to address 7hENmxbP2khsYS14akKF8xnPCdLmgv5Y3Etf6idA6XCh");
     //std::system("start www.google.com");
     
     //QString link = "http://www.google.com";
