@@ -1,5 +1,3 @@
-//#include <Gui>
-//#include <Core/QCoreApplication>
 #include <stdlib.h>
 #include <stdio.h>
 #include <streambuf>
@@ -47,11 +45,11 @@ int main(int argc, char *argv[])
   int ResidentialTechPrize = 0;
   int AgriculturalTechPrize = 0;
   int WarfareTechPrize = 0;
-  int MilitaryStrategyTechPrize = 0; 	
+  int MilitaryStrategyTechPrize = 0;
   int WeaponsTechPrice = 0;
   int IndustrialTechPrice = 0;
   int SpyTechPrize = 0;
-  int SDITechPrize = 0; 
+  int SDITechPrize = 0;
   std::string Turns = "";
    double attack;
 
@@ -182,8 +180,8 @@ int main(int argc, char *argv[])
    //double returnPop70 = 0;
    
    
-   double PCI32 = 0;   
-   double PCI33 = 0;   
+   double PCI32 = 0;  
+   double PCI33 = 0;  
    double PCI34 = 0;
    double PCI35 = 0;
    double PCI36 = 0;
@@ -216,7 +214,7 @@ int main(int argc, char *argv[])
    double BuildingIndustrialComplexesDouble = 0;
    int priceSpies = 0;
    int priceTroops = 0;
-	
+
    int priceJets = 0;
    int priceTanks = 0;
    int priceTurrets = 0;
@@ -237,7 +235,7 @@ int main(int argc, char *argv[])
    int agriculturalInt = 0;
    double owredlinessdouble = 1.0;
    int ownReadliness = 1;
-   std::string oilRigsString = "";   
+   std::string oilRigsString = "";  
    std::string enemyGoverment;
    double enemyDefence;
    //double enemyGovermnetMilitaryBonus = 1.00;
@@ -294,7 +292,7 @@ case(1):
                            std::cin >> temp2;
                            while( temp2 != "Troops"){
                            std::cin >> temp2;
-                           } 
+                           }
                            std::cin >> troops;
 
                            while( temp2 != "Jets"){
@@ -347,9 +345,9 @@ case(1):
                         while (temp2 != "Turns:"){
                         std::cin >> temp2;
                         }
-                        
+                       
                         std::cin >> Turns;
-                        
+                       
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
                         }
@@ -361,12 +359,12 @@ case(1):
                         }
                         std::cin >> govermentString;
 
-                        
+                       
                         if (govermentString == "Communism"){
-			    
+   
                             industryGovermentBonus = GovermentIndustry("Communism");
                         }
-                        
+                       
                         while (temp2 != "Networth"){
                         std::cin >> temp2 ;
                         }
@@ -390,33 +388,33 @@ case(1):
                         std::cin >> temp2 ;
                         }
                         std::cin >> BuildingIndustrialComplexes;
-                        
-                        
+                       
+                       
                         while( temp2 != "Labs"){
                         std::cin >> temp2 ;
                         }
                         std::cin >> temp2;
                         BuildingLabs = strToint(temp2);
-                        
-                        
-                        
+                       
+                       
+                       
                         while (temp2 != "Farms" ){
                         std::cin >> temp2;
-                        
+                       
                         }
                         std::cin >> farms;
-			//td::cout << " FARMS IS LINE 227 = " << farms << std::endl;
-                        
+//td::cout << " FARMS IS LINE 227 = " << farms << std::endl;
+                       
                         while( temp2 != "Rigs"){
-			std::cin >> temp2 ;
-			//std::cout << " Line 250 temp2=" << temp2 << std::endl; 
-			
-			}
-			std::cin >> oilRigsString;
-			//std::cout << "OilRigs is=" << oilRigsString << std::endl;
+std::cin >> temp2 ;
+//std::cout << " Line 250 temp2=" << temp2 << std::endl;
 
-                        
-                        
+}
+std::cin >> oilRigsString;
+//std::cout << "OilRigs is=" << oilRigsString << std::endl;
+
+                       
+                       
                         while( temp2 != "Business"){
                         std::cin >> temp2 ;
                         }
@@ -429,8 +427,8 @@ case(1):
                         businessTech = businessInt;
                         businessTech /= 1000;
 
-			
-						
+
+
                         while( temp2 != "Residential"){
                         std::cin >> temp2 ;
                         }
@@ -456,7 +454,7 @@ case(1):
                         agriculturalInt = strToint(agriculturalTechString);
                         agrciculturaTech = agriculturalInt;
                         agrciculturaTech/= 1000;
-			//std::cout << " Agricultural Tech double=" << agrciculturaTech << std::endl;
+//std::cout << " Agricultural Tech double=" << agrciculturaTech << std::endl;
 
 
 
@@ -473,7 +471,7 @@ case(1):
                         weaponInt = strToint(weaponTechString);
                         weaponDouble = weaponInt;
                             weaponDouble = weaponDouble/1000;
-                            
+                           
                        
                        while( temp2 != "Industrial"){
                        std::cin >> temp2;
@@ -507,35 +505,35 @@ case(1):
                        // }
                         //std::cin >> tempString;
                         //puts("Line 261");
-                       // 
-                       // 
+                       //
+                       //
                         //std::cin >> tempString;
                         //std::cout << tempString << std::endl;
                         //std::cin >> tempString;
-                        //std::cout << tempString << std::endl; 
+                        //std::cout << tempString << std::endl;
                         //std::cin >> PerCapitaIncomeString;
                         //std::cout << PerCapitaIncomeString << std::endl;
-                        
-                        
-                        
-                        
+                       
+                       
+                       
+                       
                           while( temp2 != "Income"){
                           std::cin >> temp2;
-    
+   
                         }
                         std::cin >> GDPpopString;
                         std::cout << "temp2 line276 " << temp2 << std::endl;
                         std::cout << " GDPpopString= " << GDPpopString << std::endl;
                         GDPpopint = strToint(GDPpopString);
-                       // std::cout << "Line 281, GDPpopint = " << GDPpopint << std::endl; 
+                       // std::cout << "Line 281, GDPpopint = " << GDPpopint << std::endl;
                         GDPpopdouble = (GDPpopint/100.0);
-                       //	std::cout << "Line 283, GDPpodouble = " << GDPpopdouble << std::endl; 	
+                       // std::cout << "Line 283, GDPpodouble = " << GDPpopdouble << std::endl;
                        //  while( temp2 != "Income")
 //
   //                      
     //                    }
 
-                        
+                       
 
                         while( temp2 != "Spies"){
                         std::cin >> temp2;
@@ -597,15 +595,15 @@ case(1):
                         //std::cout << "Troops are " << troops << std::endl;
                         //std::cout << "Jets are " << jets << std::endl;
                         //std::cout << "Tanks are " << tanks << std::endl;
-                        
+                       
                         attack = 2*jets+troops+4*tanks;
                         attack *= weaponDouble;
                         attack *= Govermentmilitary(govermentString);
                         //std::cout << " Science labs = "<< BuildingLabs << std::endl;
                         //std::cout << " Turns = " << strToint(Turns) << std::endl;
-                        
+                       
                          //std::cout << "Attack streght  " << attack << std::endl;
-                        
+                       
                         //std::cout << "Networth String  is " << NetworthString << std::endl;
                         //std::cout << "Networth is " << Networthint << std::endl;
                         //std::cout << "t is tax how much make eventally running a turn with cash on, taking to acount for the price of food " << taxDouble << '\n';
@@ -613,8 +611,8 @@ case(1):
 
                        // std::cout << "Take of the part starting with -0.03 to optimise without counting how much food you need (This tells the opitimal revenue before expensies) " << NetworthString << std::endl;
                         //std::cout << "Networth as String " << NetworthString << std::endl;
-                        
-		
+                       
+
                          
 
                          //process->start(profitProgram); // cannot open 2 firefox apps at the same time
@@ -622,32 +620,32 @@ case(1):
                         //QDesktopServices::openUrl(QUrl(""));
                         MakeMoney();
                         continue;
-                        
-                        
+                       
+                       
 case(2):
                         std::cout << "Insert own military management" << std::endl;
                         temp2 = "2a";
                         HasUserInputtedOwnMilitaryManagementPage = true;
                         while( temp2 != "Readiness:"){
                         std::cin >> temp2 ;
-                        }       
+                        }      
                         std:: cin >>readliness;
-                        
+                       
                      
                         temp2 = "2a";
                         while( temp2 != "us"){
                         std::cin >> temp2 ;
                         }                        
                         ownReadliness =strToint(readliness);
-			std::cout << " Own readliness int= " << ownReadliness << std::endl;                        
+std::cout << " Own readliness int= " << ownReadliness << std::endl;                        
                         owredlinessdouble = ownReadliness;
-                        
+                       
                         owredlinessdouble = (owredlinessdouble/1000);
                         std::cout << " Own readliness=" << owredlinessdouble << std::endl;
                         std::cout << " Own Attack=" << owredlinessdouble*attack << std::endl;
                         MakeMoney();
                         continue;
-                        
+                       
                        
 //case(3):
 //                            std::cout << "Type enemy goverment name" << std::endl;
@@ -671,13 +669,13 @@ case(2):
 //                            while( temp2 != "Turrets"){
 //                            std::cin >> temp2;
 //                            }
-                            
+                           
 //                            std::cin >> enemyturrets;
 //
 //                            while( temp2 != "Tanks"){
 //                            std::cin >> temp2;
  //                           }
-                      
+                     
 //                            std::cin >> enemyTanks;
 //
 //                            enemyDefence = enemyTroops+2*enemyturrets +4*enemyTanks;
@@ -694,100 +692,129 @@ case(2):
 //
 
 case(3):
-			std::cout << "Insert spy report" << std::endl;
-			
-			temp2 = "2a";
-                        while( temp2 != "The"){
-                        std::cin >> temp2;
-                        }
-                        
-                        temp2 = "2a";
-                        while( temp2 != "The"){
-                        std::cin >> temp2 ;
+std::cout << "Insert spy report" << std::endl;
 
+temp2 = "2a";
+                        while( temp2 != "the"){
+                        std::cin >> temp2;
+                        std::cout << "loop1" << std::endl;
                         }
-                        
+                       
                         temp2 = "2a";
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
+                        std::cout << "loop2" << std::endl;
+                        }
+                       
+                        temp2 = "2a";
+                        while( temp2 != "the"){
+                        std::cin >> temp2 ;
+                         std::cout << "loop3" << std::endl;
+                        }
+                       
+                             temp2 = "2a";
+                        while( temp2 != "the"){
+                        std::cin >> temp2 ;
+                         std::cout << "loop4" << std::endl;
+                        }
+                       
+                        temp2 = "2a";
+                        while( temp2 != "The"){
+                        std::cin >> temp2 ;
                         std::cin >> enemyGoverment;;
+                         std::cout << "loop5" << std::endl;
                         }
                      
                      
-                        while ( temp2 != "Land" ){
+                        while ( temp2 != "Land"  ){
                         std::cin >> temp2;
-                        std::cin >> temp3;
+                        //std::cin >> temp3;
                         //std::cin >> temp4;
                         //std::cin >> temp5;
+                         std::cout << "loop6" << std::endl;
+                         std::cout << "temp2= "  << temp2 << std::endl;
+                       
+                        // std::cout << "temp3= "  << temp3 << std::endl;
                         }
-                        enemyLand = temp3;
+                        enemyLand = temp2;
                         enemyLandint = strToint(enemyLand);
-                        
-                        
-                        
-                        
-                        while( temp2 != "Troops"){
-                        std::cin >> temp2;
-                        }
-                        std::cin >> EnemyTroopsComa;
-                        enemyTroops = strToint(EnemyTroopsComa);
-                        temp2 = "!!!";
-
-
-                        
-                        while (temp2 != "Turrets"){
-                        std::cin >> temp2;
-                        }
-                        std::cin >> EnemyTurretsComa;
-                        enemyturrets = strToint(EnemyTurretsComa);
-                        temp2 = "!!!";
-                        while( temp2 != "Tanks"){
+                       
+                       
+                       while( temp2 != "Weapons"){
                         std::cin >> temp2 ;
-                        }
-                        std::cin >>  EnemyTankscoma;
-                        enemyTanks = strToint(EnemyTankscoma);
-                        
-                        
-                        while( temp2 != "Bonus"){
-                        std::cin >> temp2 ;
-                        
-                        }
-                        std::cin >> EnemyDefensiveBonus;
-                        
-                        enemyDefenceBonusInt = strToint(EnemyDefensiveBonus);
-                        
-                        while( temp2 != "Weapons"){
-                        std::cin >> temp2 ;
+                       std::cout << "loop11" << std::endl;
+                       std::cout  << "temp2= "<< temp2 << std::endl;
                         }
                         std::cin >> EnemyweaponTechString;
                         //EnemyweaponStringSize = EnemyweaponTechString.size();
                         //EnemyweaponStringSize--;
                         //EnemyweaponTechString.erase(weaponStringSize);
                         enemyWeaponInt = strToint(EnemyweaponTechString);
-                            
                        
-                        
-                        
-                        
+                        while( temp2 != "Troops"){
+                        std::cin >> temp2;
+                         std::cout << "loop7" << std::endl;
+                        }
+                        std::cin >> EnemyTroopsComa;
+                        enemyTroops = strToint(EnemyTroopsComa);
+                        temp2 = "!!!";
+
+
+                       
+                        while (temp2 != "Turrets"){
+                        std::cin >> temp2;
+                       std::cout << "loop8" << std::endl;
+                        }
+                        std::cin >> EnemyTurretsComa;
+                        enemyturrets = strToint(EnemyTurretsComa);
+                        temp2 = "!!!";
+                       
+                       
+                   
+                       
+                        while( temp2 != "Tanks"){
+                        std::cin >> temp2 ;
+                       std::cout << "loop9" << std::endl;
+                        }
+                        std::cin >>  EnemyTankscoma;
+                        enemyTanks = strToint(EnemyTankscoma);
+                       
+                       
+                       // while( temp2 != "Bonus"){
+                       // std::cin >> temp2 ;
+                       //std::cout << "loop10" << std::endl;
+                       // }
+                       // std::cin >> EnemyDefensiveBonus;
+                       
+                       // enemyDefenceBonusInt = strToint(EnemyDefensiveBonus);
+                       
+                     
+                           
+                       
+                       
+                       
+                       
                         temp2 = "2a";
                         while( temp2 != "About"){
                         std::cin >> temp2 ;
+                        std::cout << "loop12" << std::endl;
                         }
-                        
+                       
                         temp2 = "2a";
                         while( temp2 != "us"){
                         std::cin >> temp2 ;
+                        std::cout << "loop13" << std::endl;
                         }
-                        
+                       
                         if( HasUserInputtedOwnMilitaryManagementPage == false){
                         puts(" You have not inserted own military management page, this may result in incorrect values for Jets needed to break with standard strike/10% more than needed Jets needed to break with standard strike/Jets neede to break with planned strike/10% Jets neede to break with planned strike");
                         }
-                        
-                        //std::cout << "Enemy Goverment is = " << enemyGoverment << std::endl; 
-                        //std::cout << "Enemy Troops is = " << enemyTroops << std::endl;; 
+                       
+                        //std::cout << "Enemy Goverment is = " << enemyGoverment << std::endl;
+                        //std::cout << "Enemy Troops is = " << enemyTroops << std::endl;;
                         //std::cout << "Enemy Turrets is = " << enemyturrets << std::endl;;
                         //std::cout << "Enemy Tanks is = " << enemyTanks << std::endl;;
-                        
+                       
                         //GovermentWeaponsTech(std::string Goverment, int points , int land)
                         //std::cout << "Enemy points in weapons (NOT debugged yet) =" << enemyWeaponInt << std::endl;
                         //std::cout << "enemyLandInt value = " << enemyLandint << std::endl;
@@ -796,45 +823,45 @@ case(3):
                         //std::cout << "Enemy defensive bonus as int =" << enemyDefenceBonusInt << std::endl;
                         enemyDefenceBonusDouble += double(enemyDefenceBonusInt)/1000;
                         //std::cout << "Enemy defensive bonus as double =" << enemyDefenceBonusDouble << std::endl;
-                        enemyDefenceBonusDouble *=GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint ); 
+                        enemyDefenceBonusDouble *=GovermentWeaponsTech(enemyGoverment, enemyWeaponInt , enemyLandint );
                         //std::cout << "Enemy defensive bonus as double (including technolog)=" << enemyDefenceBonusDouble << std::endl;
                         enemyDefence = enemyDefenceBonusDouble*(1*enemyTroops +2*enemyturrets + 4*enemyTanks)*Govermentmilitary(enemyGoverment);
                         std::cout << "Enemy defence is = " << enemyDefence << std::endl;
-                        
+                       
                         JetAttackNeededTobreak = enemyDefence/(2.0*weaponDouble*Govermentmilitary(govermentString)*ownReadliness);
                         std::cout << " Troops needed to break with standard strike= " << int(2*(int(1000*JetAttackNeededTobreak))) << std::endl;
                         std::cout << " 10% more than needed troops needed to break with standard strike= " << int(2*(int(1000*JetAttackNeededTobreak*1.1))) << std::endl;
                         std::cout << " troops neede to break with planned strike= " << int(2*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
                         std::cout << " 10% troops neede to break with planned strike= " << int(2*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
-                        
-                        std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl; 
-	                puts("This has been player tested");
-			puts("This has been player tested");
+                       
+                        std::cout << " Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak)) << std::endl;
+               puts("This has been player tested");
+puts("This has been player tested");
                         puts("This has been player tested");
-			puts("This has been player tested");	
-			puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+std::cout << " 10% more than needed Jets needed to break with standard strike= " << (int(1000*JetAttackNeededTobreak*1.1)) << std::endl;
                         puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			puts("This has been player tested");
-			std::cout << " Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+puts("This has been player tested");
+std::cout << " Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak)/1.5) << std::endl;
                         std::cout << " 10% Jets neede to break with planned strike= " << int((1000*JetAttackNeededTobreak*1.1)/1.5) << std::endl;
-                        
-                        
-                        
+                       
+                       
+                       
                         std::cout << " tanks needed to break with standard strike= " << int(0.5*(int(1000*JetAttackNeededTobreak))) << std::endl;
-        
-        
+       
+       
                         puts("This has been  been player tested");
                         puts("This has been  been player tested");
-                    
+                   
                         puts("This has been  been player tested");
                         puts("This has been  been player tested");
 
@@ -847,33 +874,33 @@ case(3):
 
                         std::cout << " tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak)/1.5)) << std::endl;
                         std::cout << " 10% tanks neede to break with planned strike= " << int(0.5*int((1000*JetAttackNeededTobreak*1.1)/1.5)) << std::endl;
-                        
+                       
                         //std::cin >> govermentString;
 
-                        
-			MakeMoney();
-			continue;	
-			
+                       
+MakeMoney();
+continue;
+
 case(4):                std::cout << " Insert Spy report from archive to as an ally to target" << std::endl;
 
-			temp2 = "2a";
+temp2 = "2a";
                         while( temp2 != "The"){
                         std::cin >> temp2;
                         }
-                        
+                       
                         //temp2 = "2a";
                         //while( temp2 != "The"){
                         //std::cin >> temp2 ;
 
                        // }
-                        
-                        
+                       
+                       
                         temp2 = "2a";
                         while( temp2 != "the"){
                         std::cin >> temp2 ;
                         std::cin >> enemyAllyGoverment;;
                         }
-                        
+                       
                         temp2 = "2a";
                         while( temp2 != "Weapons"){
 
@@ -881,19 +908,19 @@ case(4):                std::cout << " Insert Spy report from archive to as an a
                         }
                         std::cin >> temp2 ;
                         std::cin >> enemyAllyweaponTech;
-                        
-                        
+                       
+                       
                         enemyAllyweaponTechSize = enemyAllyweaponTech.size();
                         enemyAllyweaponTechSize--;
                         enemyAllyweaponTech.erase(enemyAllyweaponTechSize);
                         EnemyAllyweaponInt = strToint(enemyAllyweaponTech);
                         EnemyAllyWeaponDouble = EnemyAllyweaponInt;
                             EnemyAllyWeaponDouble = EnemyAllyWeaponDouble/1000;
-                        
-                        
-                        
-                        
-                        
+                       
+                       
+                       
+                       
+                       
                         while( temp2 != "Troops"){
                         std::cin >> temp2;
                         }
@@ -909,36 +936,36 @@ case(4):                std::cout << " Insert Spy report from archive to as an a
                         std::cin >> EnemyAllyTurretsComa;
                         EnemyAllyturrets = strToint(EnemyAllyTurretsComa);
                         temp2 = "!!!";
-                        
-                        
+                       
+                       
                         while( temp2 != "Tanks"){
                         std::cin >> temp2 ;
                         }
                         std::cin >>  EnemyAllyTankscoma;
                         EnemyAllytanks = strToint(EnemyAllyTankscoma);
 
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                         temp2 = "2a";
                         while( temp2 != "us"){
                         std::cin >> temp2 ;
                         }
 
-                        
-                        
+                       
+                       
                         std::cout << " Enemy's Ally's goverment string is = " << enemyAllyGoverment << std::endl;
                         std::cout << " Enemy's Ally's weaponTech as bouble is = " << EnemyAllyWeaponDouble << std::endl;
-			std::cout << " Enemy's Ally's troops as int is = " << EnemyAllytroops << std::endl;
-			std::cout << " Enemy's Ally's turrets as int is = " << EnemyAllyturrets << std::endl;
-			std::cout << " Enemy's Ally's tanks as int is = " << EnemyAllytanks << std::endl;
-			std::cout << " This is under construction developer only" << std::endl;
+std::cout << " Enemy's Ally's troops as int is = " << EnemyAllytroops << std::endl;
+std::cout << " Enemy's Ally's turrets as int is = " << EnemyAllyturrets << std::endl;
+std::cout << " Enemy's Ally's tanks as int is = " << EnemyAllytanks << std::endl;
+std::cout << " This is under construction developer only" << std::endl;
 
                         MakeMoney();
                         continue;
@@ -956,7 +983,7 @@ case(11):
                         std::cin >> ResidentialTechPrize;
                         std::cin >> AgriculturalTechPrize;
                         std::cin >> WarfareTechPrize;
-                        std::cin >> MilitaryStrategyTechPrize; 	
+                        std::cin >> MilitaryStrategyTechPrize;
                         std::cin >> WeaponsTechPrice;
                         std::cin >> IndustrialTechPrice;
                         std::cin >> SpyTechPrize;
@@ -975,12 +1002,12 @@ case(101):
                         std::cout << "TAX, eg 0.33" << std::endl ;
                         std::cin >> taxDouble ;
                         landINT =strToint(land);
-                        
+                       
                         returnPop = GovermentPop(govermentString)*(BuildingResidences*24+12*landINT)*(1-0.95*taxDouble);
                         returnPop *= residentialTech;
                         std::cout << "Returnpop=" << returnPop << std::endl ;
                         //std::cout << "GovermentPOP=" <<  << std::endl;
-                        
+                       
 
                         maxpopINT = returnPop ;
 
@@ -992,16 +1019,16 @@ case(101):
                         if (usingCashing == 'Y'){
                             cashningBonus = 1.2;
                         }
-                        
-                        
-                        
-                        
+                       
+                       
+                       
+                       
                         std::cout << "Tax Revenues with max pop=" << cashningBonus*revenue <<  std::endl;
                         //std::cout << "Food consumption from max pop=" << foodComsumptionPeople(maxpopINT) << std::endl; //foodComsumptionPeople(maxpopINT) EI TOIMI
                         std::cout << "Food consumption from military=" << militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) << std::endl;
                         //std::cout << "Food cost from pop(have you put the market value of food?)=" << foodComsumptionPeople(maxpopINT)*foodPrice << std::endl;  //foodComsumptionPeople(maxpopINT) EI TOIMI
-                        std::cout << "Food cost from military((have you put the market value of food?)=" << foodPrice*militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) ;             
-                    
+                        std::cout << "Food cost from military((have you put the market value of food?)=" << foodPrice*militaryFoodConsumption( troops,  jets,  turrets ,  tanks ,  spies ) ;            
+                   
                         std::cout << "Profit from pop after food cost=" << (cashningBonus*revenue-1.0*maxpopINT*0.03*foodPrice) << std::endl;
                        
                        
@@ -1014,14 +1041,14 @@ case(101):
                        
                         MakeMoney();
                         continue;
-                        
- case(500):             
-			puts("At this moment tells maximum pop with tax rate Line 749 in source");                       
-                        returnPop1 = Maxpop(0.01, landINT, land , BuildingResidences, residentialTech); 
+                       
+ case(500):            
+puts("At this moment tells maximum pop with tax rate Line 749 in source");                      
+                        returnPop1 = Maxpop(0.01, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 1% taxe rate " << returnPop1 << std::endl;
-                        returnPop2 = Maxpop(0.02, landINT, land , BuildingResidences, residentialTech); 
-                        std::cout << "POP with 2% taxe rate " << returnPop2 << std::endl;                       
-                        returnPop3 = Maxpop(0.03, landINT, land , BuildingResidences, residentialTech); 
+                        returnPop2 = Maxpop(0.02, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 2% taxe rate " << returnPop2 << std::endl;                      
+                        returnPop3 = Maxpop(0.03, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 3% taxe rate " << returnPop3 << std::endl;
                         returnPop4 = Maxpop(0.04, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 4% taxe rate " << returnPop4 << std::endl;
@@ -1043,170 +1070,170 @@ case(101):
                         returnPop12 = Maxpop(0.12, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 12% taxe rate " << returnPop12 << std::endl;
 
-			returnPop13 = Maxpop(0.13, landINT, land , BuildingResidences, residentialTech);
+returnPop13 = Maxpop(0.13, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 13% taxe rate " << returnPop13 << std::endl;
 
-			returnPop14 = Maxpop(0.14, landINT, land , BuildingResidences, residentialTech);
+returnPop14 = Maxpop(0.14, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 14& taxe rate " << returnPop14 << std::endl;
 
-			returnPop15 = Maxpop(0.15, landINT, land , BuildingResidences, residentialTech);
+returnPop15 = Maxpop(0.15, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 15& taxe rate " << returnPop15 << std::endl;
 
 
 
-			returnPop16 = Maxpop(0.16, landINT, land , BuildingResidences, residentialTech);					
-                        std::cout << "POP with 16& taxe rate " << returnPop16 << std::endl;	
+returnPop16 = Maxpop(0.16, landINT, land , BuildingResidences, residentialTech);
+                        std::cout << "POP with 16& taxe rate " << returnPop16 << std::endl;
 
 
-			returnPop17 = Maxpop(0.17, landINT, land , BuildingResidences, residentialTech);
+returnPop17 = Maxpop(0.17, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 17& taxe rate " << returnPop17 << std::endl;
-			returnPop18 = Maxpop(0.18, landINT, land , BuildingResidences, residentialTech);
+returnPop18 = Maxpop(0.18, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 18& taxe rate " << returnPop18 << std::endl;
 
 
-			returnPop19 = Maxpop(0.19, landINT, land , BuildingResidences, residentialTech);
+returnPop19 = Maxpop(0.19, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 19& taxe rate " << returnPop18 << std::endl;
 
-			returnPop20 = Maxpop(0.20, landINT, land , BuildingResidences, residentialTech);
+returnPop20 = Maxpop(0.20, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 20& taxe rate " << returnPop20 << std::endl;
 
-			returnPop25 = Maxpop(0.25, landINT, land , BuildingResidences, residentialTech);
+returnPop25 = Maxpop(0.25, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 25& taxe rate " << returnPop20 << std::endl;
 
 
-			returnPop26 = Maxpop(0.26, landINT, land , BuildingResidences, residentialTech);
+returnPop26 = Maxpop(0.26, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 26& taxe rate " << returnPop26 << std::endl;
 
 
-			returnPop27 = Maxpop(0.27, landINT, land , BuildingResidences, residentialTech);					
+returnPop27 = Maxpop(0.27, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 27& taxe rate " << returnPop27 << std::endl;
 
-			returnPop28 = Maxpop(0.28, landINT, land , BuildingResidences, residentialTech);
+returnPop28 = Maxpop(0.28, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 28& taxe rate " << returnPop28 << std::endl;
 
 
-			returnPop29 = Maxpop(0.29, landINT, land , BuildingResidences, residentialTech);
+returnPop29 = Maxpop(0.29, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 29& taxe rate " << returnPop29 << std::endl;
 
 
 
-			returnPop30 = Maxpop(0.30, landINT, land , BuildingResidences, residentialTech);
+returnPop30 = Maxpop(0.30, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 30% taxe rate " << returnPop30 << std::endl;
 
-			returnPop31 = Maxpop(0.31, landINT, land , BuildingResidences, residentialTech);
+returnPop31 = Maxpop(0.31, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 31% taxe rate " << returnPop31 << std::endl;
 
-			returnPop32 = Maxpop(0.32, landINT, land , BuildingResidences, residentialTech);		
+returnPop32 = Maxpop(0.32, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 32% taxe rate " << returnPop32 << std::endl;
-			std::cout << "Food comsunption from ppulation = " <<  int(returnPop32*0.03) << std::endl;
-                      	PCI32 = PCI( 0.32,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+std::cout << "Food comsunption from ppulation = " <<  int(returnPop32*0.03) << std::endl;
+                      PCI32 = PCI( 0.32,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-			std::cout << "Tax Revenue with 32% tax rate =" << 0.32*PCI32*(returnPop32) << std::endl;
-			std::cout << "Tax revenue with 32% tax rate while cashing =" << 1.2*0.32*PCI32*(returnPop32) << std::endl;
-  
-
-
+std::cout << "Tax Revenue with 32% tax rate =" << 0.32*PCI32*(returnPop32) << std::endl;
+std::cout << "Tax revenue with 32% tax rate while cashing =" << 1.2*0.32*PCI32*(returnPop32) << std::endl;
+ 
 
 
 
-			returnPop33 = Maxpop(0.33, landINT, land , BuildingResidences, residentialTech);
+
+
+returnPop33 = Maxpop(0.33, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 33% taxe rate " << returnPop33 << std::endl;
                         std::cout << "Food comsunption from ppulation = " <<  int(returnPop33*0.03) << std::endl;
-                      	
-                      	
-                      	
-                      	
-                      	
-                      	
-                      	PCI33 = PCI( 0.33,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+                     
+                     
+                     
+                     
+                     
+                     
+                      PCI33 = PCI( 0.33,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-			std::cout << "Tax Revenue with 33% tax rate =" << 0.33*PCI33*(returnPop33) << std::endl;
-			std::cout << "Tax revenue with 33% tax rate while cashing =" << 1.2*0.33*PCI33*(returnPop33) << std::endl;
-  
-                        
-                        
-                        
-                        
-                        
-                        
-			returnPop34 = Maxpop(0.34, landINT, land , BuildingResidences, residentialTech);
+std::cout << "Tax Revenue with 33% tax rate =" << 0.33*PCI33*(returnPop33) << std::endl;
+std::cout << "Tax revenue with 33% tax rate while cashing =" << 1.2*0.33*PCI33*(returnPop33) << std::endl;
+ 
+                       
+                       
+                       
+                       
+                       
+                       
+returnPop34 = Maxpop(0.34, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 34% taxe rate " << returnPop34 << std::endl;
-			std::cout << "Food comsunption from ppulation = " <<  int(returnPop34*0.03) << std::endl;
+std::cout << "Food comsunption from ppulation = " <<  int(returnPop34*0.03) << std::endl;
 
 
-			PCI34 = PCI( 0.34,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+PCI34 = PCI( 0.34,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-			std::cout << "Tax Revenue with 34% tax rate =" << 0.34*PCI34*(returnPop34) << std::endl;
-			std::cout << "Tax revenue with 34% tax rate while cashing =" << 1.2*0.34*PCI34*(returnPop34) << std::endl;
+std::cout << "Tax Revenue with 34% tax rate =" << 0.34*PCI34*(returnPop34) << std::endl;
+std::cout << "Tax revenue with 34% tax rate while cashing =" << 1.2*0.34*PCI34*(returnPop34) << std::endl;
 
 
 
-			PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
                         returnPop35 =Maxpop(0.35, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 35% taxe rate " << returnPop35 << std::endl;
-			std::cout << "Food comsunption from ppulation = " <<  int(returnPop35*0.03) << std::endl;
-			PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
+std::cout << "Food comsunption from ppulation = " <<  int(returnPop35*0.03) << std::endl;
+PCI35 = PCI( 0.35,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-			std::cout << "Tax Revenue with 35% tax rate =" << 0.35*PCI35*(returnPop35-2) << std::endl;
-			std::cout << "Tax revenue with 35% tax rate while cashing =" << 1.2*0.35*PCI35*(returnPop35-2) << std::endl;
+std::cout << "Tax Revenue with 35% tax rate =" << 0.35*PCI35*(returnPop35-2) << std::endl;
+std::cout << "Tax revenue with 35% tax rate while cashing =" << 1.2*0.35*PCI35*(returnPop35-2) << std::endl;
 
 
 
                         returnPop36 = Maxpop(0.36, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 36% taxe rate " << returnPop36 << std::endl;
 
-			PCI36 = PCI( 0.36,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
-			
-			returnPop36 = Maxpop(0.36, landINT, land , BuildingResidences, residentialTech);
-			
-			std::cout << "POP with 36% taxe rate " << returnPop36 << std::endl;
-			
-			std::cout << "Tax Revenue with 36% tax rate =" << 0.36*PCI36*(returnPop36-2) << std::endl;
-			std::cout << "Tax revenue with 36% tax rate while cashing =" << 1.2*0.36*PCI36*(returnPop36-2) << std::endl;
+PCI36 = PCI( 0.36,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-			
-			
+returnPop36 = Maxpop(0.36, landINT, land , BuildingResidences, residentialTech);
+
+std::cout << "POP with 36% taxe rate " << returnPop36 << std::endl;
+
+std::cout << "Tax Revenue with 36% tax rate =" << 0.36*PCI36*(returnPop36-2) << std::endl;
+std::cout << "Tax revenue with 36% tax rate while cashing =" << 1.2*0.36*PCI36*(returnPop36-2) << std::endl;
+
+
+
 
                         returnPop37 = Maxpop(0.37, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 37% taxe rate " << returnPop37 << std::endl;
-			std::cout << "Food comsunption from ppulation = " <<  int(returnPop37*0.03) << std::endl;
+std::cout << "Food comsunption from ppulation = " <<  int(returnPop37*0.03) << std::endl;
 
-			PCI37 = PCI( 0.37,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
-		
+PCI37 = PCI( 0.37,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-		        std::cout << "PCI with 37% taxe rate " << PCI37 << std::endl;
-			
-			std::cout << "Tax Revenue with 37% tax rate =" << 0.37*PCI37*(returnPop37-2) << std::endl;
-			std::cout << "Tax revenue with 37% tax rate while cashing =" << 1.2*0.37*PCI37*(returnPop37-2) << std::endl;
+
+       std::cout << "PCI with 37% taxe rate " << PCI37 << std::endl;
+
+std::cout << "Tax Revenue with 37% tax rate =" << 0.37*PCI37*(returnPop37-2) << std::endl;
+std::cout << "Tax revenue with 37% tax rate while cashing =" << 1.2*0.37*PCI37*(returnPop37-2) << std::endl;
 
 
 
                         returnPop38 = Maxpop(0.38, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 38% taxe rate " << returnPop38 << std::endl;
-			std::cout << "Food comsunption from ppulation = " <<  int(returnPop38*0.03) << std::endl;
+std::cout << "Food comsunption from ppulation = " <<  int(returnPop38*0.03) << std::endl;
 
-			PCI38 = PCI( 0.38,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
-		
+PCI38 = PCI( 0.38,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-		        std::cout << "PCI with 38% taxe rate " << PCI38 << std::endl;
-			
-			std::cout << "Tax Revenue with 38% tax rate =" << 0.38*PCI38*(returnPop38-2) << std::endl;
-			std::cout << "Tax revenue with 38% tax rate while cashing =" << 1.2*0.38*PCI38*(returnPop38-2) << std::endl;
+
+       std::cout << "PCI with 38% taxe rate " << PCI38 << std::endl;
+
+std::cout << "Tax Revenue with 38% tax rate =" << 0.38*PCI38*(returnPop38-2) << std::endl;
+std::cout << "Tax revenue with 38% tax rate while cashing =" << 1.2*0.38*PCI38*(returnPop38-2) << std::endl;
 
 
 
 
                         returnPop39 = Maxpop(0.39, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 39% taxe rate " << returnPop39 << std::endl;
-			std::cout << "Food comsunption from ppulation = " <<  int(returnPop39*0.03) << std::endl;
-			PCI39 = PCI( 0.39,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
-		
+std::cout << "Food comsunption from ppulation = " <<  int(returnPop39*0.03) << std::endl;
+PCI39 = PCI( 0.39,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-		        std::cout << "PCI with 39% taxe rate " << PCI39 << std::endl;
-			
-			std::cout << "Tax Revenue with 39% tax rate =" << 0.39*PCI39*(returnPop39-2) << std::endl;
-			std::cout << "Tax revenue with 39% tax rate while cashing =" << 1.2*0.39*PCI39*(returnPop40-2) << std::endl;
+
+       std::cout << "PCI with 39% taxe rate " << PCI39 << std::endl;
+
+std::cout << "Tax Revenue with 39% tax rate =" << 0.39*PCI39*(returnPop39-2) << std::endl;
+std::cout << "Tax revenue with 39% tax rate while cashing =" << 1.2*0.39*PCI39*(returnPop40-2) << std::endl;
 
 
 
@@ -1215,13 +1242,13 @@ case(101):
                         returnPop40 = Maxpop(0.40, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 40% taxe rate " << (returnPop40-2) << std::endl;
 
-			PCI40 = PCI( 0.40,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
-		
+PCI40 = PCI( 0.40,  Networthint  , strToint(land)  ,  BuildingResidences  ,  businessTech,  govermentString);
 
-		        std::cout << "PCI with 40% taxe rate " << PCI40 << std::endl;
-			
-			std::cout << "Tax Revenue with 40% tax rate =" << 0.40*PCI40*(returnPop40-2) << std::endl;
-			std::cout << "Tax revenue with 40% tax rate while cashing =" << 1.2*0.40*PCI40*(returnPop40-2) << std::endl;
+
+       std::cout << "PCI with 40% taxe rate " << PCI40 << std::endl;
+
+std::cout << "Tax Revenue with 40% tax rate =" << 0.40*PCI40*(returnPop40-2) << std::endl;
+std::cout << "Tax revenue with 40% tax rate while cashing =" << 1.2*0.40*PCI40*(returnPop40-2) << std::endl;
 
                         returnPop41 = Maxpop(0.41, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 41% taxe rate " << returnPop41 << std::endl;
@@ -1233,48 +1260,48 @@ case(101):
                         std::cout << "POP with 43% taxe rate " << returnPop43 << std::endl;
  
 
-			returnPop44 = Maxpop(0.44, landINT, land , BuildingResidences, residentialTech);
+returnPop44 = Maxpop(0.44, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 44% taxe rate " << returnPop44 << std::endl;
 
 
 
-			returnPop45 = Maxpop(0.45, landINT, land , BuildingResidences, residentialTech);
+returnPop45 = Maxpop(0.45, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 45% taxe rate " << returnPop45 << std::endl;
 
 
-			returnPop46 = Maxpop(0.46, landINT, land , BuildingResidences, residentialTech);
+returnPop46 = Maxpop(0.46, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 46% taxe rate " << returnPop46 << std::endl;
 
 
-			returnPop47 = Maxpop(0.47, landINT, land , BuildingResidences, residentialTech);
+returnPop47 = Maxpop(0.47, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 47% taxe rate " << returnPop47 << std::endl;
 
 
-			returnPop48 = Maxpop(0.48, landINT, land , BuildingResidences, residentialTech);
+returnPop48 = Maxpop(0.48, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 48% taxe rate " << returnPop48 << std::endl;
 
 
 
-			returnPop49 = Maxpop(0.49, landINT, land , BuildingResidences, residentialTech);
+returnPop49 = Maxpop(0.49, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 49% taxe rate " << returnPop41 << std::endl;
 
 
-			returnPop50 = Maxpop(0.50, landINT, land , BuildingResidences, residentialTech);
+returnPop50 = Maxpop(0.50, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 50% taxe rate " << returnPop50 << std::endl;
 
-			returnPop51 = Maxpop(0.51, landINT, land , BuildingResidences, residentialTech);
+returnPop51 = Maxpop(0.51, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 51% taxe rate " << returnPop51 << std::endl;
 
-			returnPop52 = Maxpop(0.52, landINT, land , BuildingResidences, residentialTech);
+returnPop52 = Maxpop(0.52, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 52% taxe rate " << returnPop52 << std::endl;
 
-			returnPop53 = Maxpop(0.53, landINT, land , BuildingResidences, residentialTech);
+returnPop53 = Maxpop(0.53, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 53% taxe rate " << returnPop53 << std::endl;
 
-			returnPop54 = Maxpop(0.54, landINT, land , BuildingResidences, residentialTech);
+returnPop54 = Maxpop(0.54, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 54% taxe rate " << returnPop54 << std::endl;
 
-			returnPop55 = Maxpop(0.55, landINT, land , BuildingResidences, residentialTech);
+returnPop55 = Maxpop(0.55, landINT, land , BuildingResidences, residentialTech);
                         std::cout << "POP with 55% taxe rate " << returnPop55 << std::endl;
 
                         MakeMoney();
@@ -1287,8 +1314,8 @@ case(101):
 
                         //std::cout << "Industrial complexes=" << BuildingIndustrialComplexes << std::endl;
                         //std::cout << "Industrial tech=" << industrialDouble << std::endl;
-                        //std::cout << "Goverment Industrial tech bonus=" << industryGovermentBonus << std::endl; 
-                        
+                        //std::cout << "Goverment Industrial tech bonus=" << industryGovermentBonus << std::endl;
+                       
                         BuildingIndustrialComplexesDouble = BuildingIndustrialComplexes;
                         troopdouble = (BuildingIndustrialComplexesDouble*industryGovermentBonus*industrialDouble);
                         troopdouble *= 1.86;
@@ -1299,56 +1326,56 @@ case(101):
 
                         //int trooprevenue = troopint*priceTroops;
                         //int jetsrevenue = troopint*priceJets;
-	 		std::cout << "Spies per turn "  << int(0.333*troopint) << " Profit from spies per turn= "  << int(0.333*troopint*priceSpies) << std::endl;
+std::cout << "Spies per turn "  << int(0.333*troopint) << " Profit from spies per turn= "  << int(0.333*troopint*priceSpies) << std::endl;
                         std::cout << "Troops per turn " << troopint << " Profit from troops per turn= " << troopint*priceTroops << std::endl;
                         std::cout << "Jets per turn " << troopint << " Profit from jets per turn= " << troopint*priceJets << std::endl;
                         std::cout << "Turrets per turn " << troopint << " Profit from turrets per turn= " << troopint*priceTurrets << std::endl;
                         std::cout << "Tanks per turn " << tanksint <<  " Profit from turrets per turn= " << tanksint*priceTanks << std::endl;
-			
-			
-			MakeMoney();	
+
+
+MakeMoney();
                         continue;
-case(104):		
+case(104):
 
-			std::cout << "Farming complexes="  << farms << std::endl;
-			Farmint = strToint(farms);
-			std::cout << "Goverment String=" << govermentString << std::endl;
-			FarmProduction = agrciculturaTech*5.3*Farmint*GovermentFarming(govermentString);
-			std::cout << " Farming Production per turn =" <<FarmProduction << std::endl;
-			std::cout << " Money for selling food on the market per turn =" << FarmProduction*foodPrice << std::endl;
-			MakeMoney();
-			continue;
+std::cout << "Farming complexes="  << farms << std::endl;
+Farmint = strToint(farms);
+std::cout << "Goverment String=" << govermentString << std::endl;
+FarmProduction = agrciculturaTech*5.3*Farmint*GovermentFarming(govermentString);
+std::cout << " Farming Production per turn =" <<FarmProduction << std::endl;
+std::cout << " Money for selling food on the market per turn =" << FarmProduction*foodPrice << std::endl;
+MakeMoney();
+continue;
 
-case(105):		
+case(105):
 
-			std::cout << "Science labs="  << BuildingLabs << std::endl;
-			std::cout << "Land=" <<  land << std::endl;
-			
-			std::cout << "Tech per turn = " << TechPerTurn(BuildingLabs, strToint(land)) << std::endl;
-			std::cout << "Turns= " << strToint(Turns) << std::endl;
-			
-			std::cout << "money from selling military tech per turn =" << (MilitaryTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
-			
-			std::cout << "money from selling medical tech per turn ="  << (MedicalTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
-			std::cout << "money from selling business tech per turn =" << (BusinessTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
-                        std::cout << "money from selling residental tech per turn =" << (ResidentialTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;			
+std::cout << "Science labs="  << BuildingLabs << std::endl;
+std::cout << "Land=" <<  land << std::endl;
 
-                     std::cout << "money from selling Agricultural tech per turn =" << (AgriculturalTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;			
-                      std::cout << "money from selling Wartfarte tech per turn =" << (WarfareTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;	
-                      
+std::cout << "Tech per turn = " << TechPerTurn(BuildingLabs, strToint(land)) << std::endl;
+std::cout << "Turns= " << strToint(Turns) << std::endl;
+
+std::cout << "money from selling military tech per turn =" << (MilitaryTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+
+std::cout << "money from selling medical tech per turn ="  << (MedicalTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+std::cout << "money from selling business tech per turn =" << (BusinessTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+                        std::cout << "money from selling residental tech per turn =" << (ResidentialTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+
+                     std::cout << "money from selling Agricultural tech per turn =" << (AgriculturalTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+                      std::cout << "money from selling Wartfarte tech per turn =" << (WarfareTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;
+                     
                         std::cout << "money from selling miliatry tech strategy tech per turn =" << (MilitaryStrategyTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
-                      
-                      
+                     
+                     
                     std::cout << "money from selling weapon tech strategy tech per turn =" << (WeaponsTechPrice*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
 
                 std::cout << "money from selling industrial tech per turn =" << (IndustrialTechPrice*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
                std::cout << "money from selling spy tech per turn =" << (SpyTechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
 
-			std::cout << "money from selling SDI tech per turn =" << (SDITechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
-			
-			
-			MakeMoney();
-			continue;
+std::cout << "money from selling SDI tech per turn =" << (SDITechPrize*TechPerTurn(BuildingLabs, strToint(land))) << std::endl;  
+
+
+MakeMoney();
+continue;
 
 
 case(200):
