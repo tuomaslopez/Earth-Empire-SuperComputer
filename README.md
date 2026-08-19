@@ -11,3 +11,4 @@ Download Zip
 extract all
 go to directory and type in terminal
 make
+do not be worried about warnings that the compiler is giving you 
